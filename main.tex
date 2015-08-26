@@ -2,19 +2,29 @@
 
 %% Latex documents that need direct input
 \input{latex/filesystem/package.tex}        % contains the latex packages
-\input{content/frontmatter.tex}             % contains the Title and Autor info
+\input{content/frontmatter.tex}             % contains the information regarding Project call, title, autor, etc.
 \input{latex/filesystem/fileSetup.tex}      % contains package and variables init.
 % \input{content/acronym_definition.tex}      % contains the acronims
 
 %% Select inputing only one part of the document
-%\includeonly{content/intro/intro}   % the file wihtout .tex
-%\includeonly{content/other/other_content}
+%\includeonly{./content/participants/list}   % the file wihtout .tex
+%\includeonly{./content/proposal/excelence}
+%\includeonly{./content/proposal/impact}
+%\includeonly{./content/proposal/implementation}
+%\includeonly{./content/cv/cv}
 
 % \addbibresource{./content/lit_review.bib}
 % \addbibresource{./content/biblatex-examples.bib}
 
 \begin{document}
 \input{latex/first_page.tex}
+
+\newpage
+\setcounter{tocdepth}{1}
+\setcounter{section}{-1}
+\tableofcontents
+
+\include{./content/participants/list}                 % the file wihtout .tex
 
 \newpage
 \section{SUMMARY}
@@ -26,9 +36,9 @@ Please provide a short summary of the proposal, which could be the same as the p
 \include*{./content/proposal/excelence}               % the file wihtout .tex
 \include*{./content/proposal/impact}                  % the file wihtout .tex
 \include*{./content/proposal/implementation}          % the file wihtout .tex
-% \include*{./content/proposal/cv/xxxxxx}               % the file wihtout .tex
-% \include*{./content/proposal/org/xxxxxx}              % the file wihtout .tex
-% \include*{./content/proposal/ethical/xxxxxx}          % the file wihtout .tex
+\include{./content/cv/cv}                             % the file wihtout .tex
+\include{./content/participants/capacities}           % the file wihtout .tex
+\include{./content/ethical/info}                      % the file wihtout .tex
 
 % \include*{content/other/other}
 % \printbibliography
