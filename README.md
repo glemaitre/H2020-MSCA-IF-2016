@@ -149,8 +149,6 @@ TODO
 ----
 (Stuff to get done, either in the project or the template, that would depend :))
 
-* [ ] Create a better cleveref example
-* [ ] Some compilation erros for the nested acronyms
-* [ ] Place a snapshot of each template linking to its *branch*
+* [ ] Test packages with by adding a usege example
 * [ ] Task 1
 * [ ] Task 2
