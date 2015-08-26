@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%>>>> uncomment following for page numbers
+% \pagestyle{plain}    
+%>>>> uncomment following to start page numbering at 301 
+%\setcounter{page}{301} 
+
+\renewcommand{\familydefault}{\sfdefault}
+\normalfont % this is required for the change to take effect
+
+\newcommand{\TODO}[1]{{\textcolor{red}{[\textbf{TODO:} #1]}}}
+\titlespacing\section{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+\let\oldfootnotesize\footnotesize
+% \renewcommand{\footnotesize}{\fontsize{8bp}{1em}\selectfont}
+% \renewcommand{\cite}{\autocite} % citations in footnotes
+% \bibliography{bibliography}
+
+\headheight=14pt
+
+\hypersetup{
+    pdftitle={H2020-MSCA-IF-2015},    % title
+    pdfauthor={xxxxxxxxx},
+    colorlinks=true,
+    citecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+  }
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[C]{{\sc \proposalAcronym}\,--\,\evaluationPannel}
+\fancyfoot{}
+\fancyfoot[C]{Part B - Page \thepage~of \pageref{LastPage}}
+
+
+\renewcommand{\headrulewidth}{0pt}
+
+
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+

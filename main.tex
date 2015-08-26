@@ -1,0 +1,37 @@
+\documentclass[a4paper,11pt]{article}
+
+%% Latex documents that need direct input
+\input{latex/filesystem/package.tex}        % contains the latex packages
+\input{content/frontmatter.tex}             % contains the Title and Autor info
+\input{latex/filesystem/fileSetup.tex}      % contains package and variables init.
+% \input{content/acronym_definition.tex}      % contains the acronims
+
+%% Select inputing only one part of the document
+%\includeonly{content/intro/intro}   % the file wihtout .tex
+%\includeonly{content/other/other_content}
+
+% \addbibresource{./content/lit_review.bib}
+% \addbibresource{./content/biblatex-examples.bib}
+
+\begin{document}
+\input{latex/first_page.tex}
+
+\newpage
+\section{SUMMARY}
+\label{sec:summary}
+Please provide a short summary of the proposal, which could be the same as the proposal abstract, built around a research/innovation project.
+
+%% Incldue the content without .tex extension
+% \acresetall  % reset the acronyms from the abstract
+\include*{./content/proposal/excelence}               % the file wihtout .tex
+\include*{./content/proposal/impact}                  % the file wihtout .tex
+\include*{./content/proposal/implementation}          % the file wihtout .tex
+% \include*{./content/proposal/cv/xxxxxx}               % the file wihtout .tex
+% \include*{./content/proposal/org/xxxxxx}              % the file wihtout .tex
+% \include*{./content/proposal/ethical/xxxxxx}          % the file wihtout .tex
+
+% \include*{content/other/other}
+% \printbibliography
+
+\input{latex/last_page.tex}
+\end{document}

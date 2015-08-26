@@ -16,8 +16,13 @@ Specific Call information can be found [here](https://ec.europa.eu/research/part
 ### Submission Guidelines
 (check-list to ensure proper submission)
 * [x] Register to ECAS
-* [x] selecting the topic (see [manual](https://webgate.ec.europa.eu/fpfis/wikis/display/ECResearchGMS/Steps+1+and+2+Logging+in+and+Selecting+a+Topic?src=email))
-  * you need the ACRONYM you want for your project title
+* [x] Register the PRE-proposal (see [manual](https://webgate.ec.europa.eu/fpfis/wikis/display/ECResearchGMS/Steps+1+and+2+Logging+in+and+Selecting+a+Topic?src=email))
+  * [x] Select the topic H2020-MSCAIF-2015
+  * [x] Find the PIC number (``i.e. for Universitat de Girona``:999895983)
+  * [ ] the ACRONYM you want for your project title
+  * [ ] Add people who needs to access to the proposal
+      * Your advisor
+      * Univeristy office in charge of proposal review (``ie. for UdG: Jordi Castanyer, european.office [at] whatever.else ``)
 * [ ] Prepare **part B** documentation using this template
   * [ ] 10 pages limit for sections 1-3 all together
   * [ ] No reference to the outmcome of previous evaluations of this or any similar proposal should be included in the text. Experts will be strictly instructed to disregard any such references.
