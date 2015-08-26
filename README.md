@@ -149,6 +149,7 @@ TODO
 ----
 (Stuff to get done, either in the project or the template, that would depend :))
 
+* [ ] Use **titling** package for the starting and ending page
 * [ ] Test packages with by adding a usege example
 * [ ] Task 1
 * [ ] Task 2

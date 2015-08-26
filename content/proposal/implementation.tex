@@ -1,9 +1,89 @@
 \section{IMPLEMENTATION}
 \label{sec:implementation}
 
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+\subsection{Overall coherence and effectiveness of the work plan}
+
+The proposal should be designed in the optimal way to achieve the desired impact. A Gantt Chart should be included in the text where the following should be listed:
+\begin{itemize}
+\item Work Packages description;
+\item List of major deliverables;
+\item List of major milestones;
+\item Secondments if applicable.
+\end{itemize}
+
+The schedule should be in terms of number of months elapsed from the start of the project.
+
+\subsection{Appropriateness of the management structure and procedures, including quality management and risk management}
+
+Develop your proposal according to the following lines:
+\begin{itemize}
+\item Project organisation and management structure, including the financial management strategy, as well as the progress monitoring mechanisms put in place;
+\item Risks that might endanger reaching project objectives and the contingency plans to be put in place should risk occur.
+\end{itemize}
+The following could be also included in the Gantt Chart:
+\begin{itemize}
+\item Progress monitoring;
+\item Risk management;
+\item Intellectual Property Rights (IPR).
+\end{itemize}
+
+\begin{figure}[htbp]
+\begin{center}
+
+\begin{ganttchart}[
+    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+    hgrid style/.style={draw=black!5, line width=.75pt},
+    vgrid={*1{draw=black!5, line width=.75pt}},
+    title/.style={draw=none, fill=none},
+    title label font=\bfseries\footnotesize,
+    title label node/.append style={below=7pt},
+    include title in canvas=false,
+    bar label font=\small\color{black!70},
+    bar label node/.append style={left=2cm},
+    bar/.append style={draw=none, fill=black!63},
+    bar progress label font=\footnotesize\color{black!70},
+    group left shift=0,
+    group right shift=0,
+    group height=.5,
+    group peaks tip position=0,
+    group label node/.append style={left=.6cm},
+    group progress label font=\bfseries\small
+  ]{1}{24}
+  \gantttitle[
+    title label node/.append style={below left=7pt and -3pt}
+  ]{Month:\quad1}{1}
+  \gantttitlelist{2,...,24}{1} \\
+  \ganttgroup{Work Package}{1}{10} \\
+  \ganttgroup{Deliverable}{5}{15} \\
+  \ganttgroup{Milestone}{5}{5} \\
+  \ganttgroup{Secondment}{20}{23} \\
+  \ganttgroup{Conference}{16}{16} \\
+  \ganttgroup{Workshop}{17}{17} \\
+  \ganttgroup{Seminar}{18}{18} \\
+  \ganttgroup{Dessemination}{23}{24} \\
+  \ganttgroup{Public engagement}{4}{5} \\
+  \ganttgroup{Other}{7}{10}
+\end{ganttchart}
+
+\end{center}
+\caption{Example Gantt Chart}
+\end{figure}
+
+\subsection{Appropriateness of the institutional environment (infrastructure)}
+\label{sec:institution}
+
+Give a description of the legal entity/ies and its main tasks (per participant).
+Explain why the fellowship has the maximum chance of a successful outcome.
+
+NB: Each participant is described in Section 6. This specific information should not be repeated here.
+
+\subsection{Competences, experience and complementarity of the participating organisations and institutional commitment}
+\label{sec:competences}
+
+Here describe how the fellowship will be beneficial for both the Experienced Researcher and host organisation(s).
+\begin{itemize}
+\item Commitment of beneficiary and partner organisations to the programme (for partner organisations, please see also section 6)
+\end{itemize}
+
+\paragraph{Partner organisations:}
+The role of Partner organisations in MS/AC for secondments and their active contribution to the research and training activities should be described.
