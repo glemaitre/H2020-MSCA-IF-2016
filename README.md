@@ -18,9 +18,10 @@ Specific Call information can be found [here](https://ec.europa.eu/research/part
 * [x] Register to ECAS
 * [x] Register the PRE-proposal (see [manual](https://webgate.ec.europa.eu/fpfis/wikis/display/ECResearchGMS/Steps+1+and+2+Logging+in+and+Selecting+a+Topic?src=email))
   * Select the topic H2020-MSCAIF-2015
-  * Find the PIC number for your institution 
+  * Find the PIC number for your institution (`UdG PIC is: 999895983`)
   * the ACRONYM you want for your project title
-  * Add people who needs to access to the proposal (`ie: your advisor, univeristy office in charge of proposal reviewing, etc.`)
+  * Add people who needs to access to the proposal 
+      * Jordi Castanyer (european.office@udg.edu)
 * [ ] Prepare **part B** documentation using this template
   * [ ] 10 pages limit for sections 1-3 all together
   * [ ] No reference to the outmcome of previous evaluations of this or any similar proposal should be included in the text. Experts will be strictly instructed to disregard any such references.
