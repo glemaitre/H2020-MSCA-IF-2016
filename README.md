@@ -117,8 +117,8 @@ The cross indicates, that they have a usage example in this template.
 * [ ] [biblatex](http://www.ctan.org/pkg/biblatex) using a biber backend
 * [ ] graphicx
 * [x] newclude
-* [ ] acro using marcos=true, which allow for \myTriger instead of \ac{myTriger}
-* [x] hyperref
+* [x] acro using marcos=true, which allow for \myTriger instead of \ac{myTriger}
+* [ ] hyperref
 * [ ] cleveref
 * [ ] lipsum
 
