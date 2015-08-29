@@ -29,26 +29,32 @@
 \newpage
 \section{SUMMARY}
 \label{sec:summary}
-Hiiiii \us is \ac{us} then \us is xx
-Please provide a short summary of the proposal, which could be the same as the proposal abstract, built around a research/innovation project.
+% Hiiiii \us is \ac{us} then \us is xx
+% Please provide a short summary of the proposal, which could be the same as the proposal abstract, built around a research/innovation project.
 
-Regular citation~\cite{Xarticle} and a footnote citation~\footcite{Xbook}.
+% Regular citation~\cite{Xarticle} and a footnote citation~\footcite{Xbook}.
 
-Here all the citations need to be footnote but own publications, etc. should belong to the text.
-Look at the source-code for the hack.
+% Here all the citations need to be footnote but own publications, etc. should belong to the text.
+% Look at the source-code for the hack.
+
+% \let\citeBk=\cite
+% \let\cite=\footcite
+
+% Now both should bee a footnote. This is regular citation~\cite{Xarticle_full} and a footnote citation~\footcite{Xbook_full}.
+
+% \let\cite=\citeBk
+
+% Back to regular behaviour. This is regular citation~\cite{Xarticle_full} and a footnote citation~\footcite{Xbook_full}.
 
 \let\citeBk=\cite
 \let\cite=\footcite
 
-Now both should bee a footnote. This is regular citation~\cite{Xarticle_full} and a footnote citation~\footcite{Xbook_full}.
 
-\let\cite=\citeBk
-
-Back to regular behaviour. This is regular citation~\cite{Xarticle_full} and a footnote citation~\footcite{Xbook_full}.
+That will be the abstract of the proposal
 
 %% Incldue the content without .tex extension
 % \acresetall  % reset the acronyms from the abstract
-\include*{./content/proposal/excelence}               % the file wihtout .tex
+\include*{./content/proposal/excellence}               % the file wihtout .tex
 \include*{./content/proposal/impact}                  % the file wihtout .tex
 \include*{./content/proposal/implementation}          % the file wihtout .tex
 \include{./content/cv/cv}                             % the file wihtout .tex
