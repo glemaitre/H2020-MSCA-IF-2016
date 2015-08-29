@@ -13,8 +13,7 @@
 %\includeonly{./content/proposal/implementation}
 %\includeonly{./content/cv/cv}
 
-% \addbibresource{./content/lit_review.bib}
-% \addbibresource{./content/biblatex-examples.bib}
+\addbibresource{./content/lit_review.bib}
 
 \begin{document}
 \input{latex/first_page.tex}
@@ -24,6 +23,7 @@
 \setcounter{section}{-1}
 \tableofcontents
 
+
 \include{./content/participants/list}                 % the file wihtout .tex
 
 \newpage
@@ -31,6 +31,20 @@
 \label{sec:summary}
 Hiiiii \us is \ac{us} then \us is xx
 Please provide a short summary of the proposal, which could be the same as the proposal abstract, built around a research/innovation project.
+
+Regular citation~\cite{Xarticle} and a footnote citation~\footcite{Xbook}.
+
+Here all the citations need to be footnote but own publications, etc. should belong to the text.
+Look at the source-code for the hack.
+
+\let\citeBk=\cite
+\let\cite=\footcite
+
+Now both should bee a footnote. This is regular citation~\cite{Xarticle_full} and a footnote citation~\footcite{Xbook_full}.
+
+\let\cite=\citeBk
+
+Back to regular behaviour. This is regular citation~\cite{Xarticle_full} and a footnote citation~\footcite{Xbook_full}.
 
 %% Incldue the content without .tex extension
 % \acresetall  % reset the acronyms from the abstract
