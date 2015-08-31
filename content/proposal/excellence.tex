@@ -6,23 +6,71 @@
 
 \subsubsection{Introduction}
 
-\paragraph{Introduction to prostate cancer imaging using multi-parametric \ac{mri}}
+In Europe, prostate cancer is reported to be the most frequently diagnosed cancer of men and thus one of the leading cause of death of cancer~\footcite{Ferlay2013}. 
+Currently, addressing this issue is a major public debate, in which the implementation of appropriate screening methods and subsequent treatments is key.
 
-In Europe, prostate cancer is reported to be the most frequently diagnosed cancer of men accounting for 22.8~\%~\footcite{Ferlay2013}. 
-The \ac{erspc} is conducted to investigate the potential benefits of a population-based screening~\footcite{Schroder2015}. 
+In this regard, the \ac{erspc} is conducted to investigate the potential benefits of a population-based screening~\footcite{Schroder2015}. 
 The screening consists of a \ac{psa} test and depending of the \ac{psa} level measured, an additional ``blind'' biopsy is carried out. 
-Despite the fact of a significant reduction of the prostate cancer mortality, the screening strategy employed suffers of a high rate of over-diagnosis and over-treatment~\cite{Delpierre2013,Schroder2015}.
-In addition, the investigators of the trial has come to the conclusion that the use of ``multi-parametric \ac{mri} and the development of new markers are the hope for the future''.
+Despite the fact of a significant reduction of the prostate cancer mortality, the screening strategy employed suffers of a high rate of over-diagnosis and over-treatment~\cite{Delpierre2013,Schroder2015}, due to the fact that prostate cancer growth is characterized by two main types of evolution: slow and fast.
+The slow-growing tumours account for up to 85 \% of all cancers and stay confined to the prostate gland, while the fast-growing tumours rapidly develop and metastasise to other organs, significantly affecting the morbidity and mortality rate.
+Furthermore, prostate cancer is more likely to develop in specific regions of the prostate: around 70-80 \% of prostate cancers originate in the \ac{pz}, whereas 10-20 \% in the \ac{cg}, but appear to be more aggressive and more likely to invade other organs. 
+\textbf{Thus, together with cancer detection, the screening methods need to provide an estimate of the cancer aggressiveness to allow clinicians to act accordingly.}
 
-\paragraph{State-of-the-art on \ac{cad} for prostate cancer}
+In addition, the investigators of the \ac{erspc} have come to the conclusion that the use of \emph{``multi-parametric \ac{mri} and the development of new markers are the hope for the future''}.
+That is why, \ac{cad} systems revolved around mono- and multi-parametric \ac{mri} are currently developed by the medical imaging community, and were recently reviewed by Lema\^itre~\emph{et al.}~\footcite{Lemaitre2015}.
+The \ac{cad} systems developed are designed under the same architecture as depicted in Fig.\,\ref{fig:wkfcad}. 
+The available \ac{mri} modalities during prostate exam are \ac{t2w}-\ac{mri}, \ac{dw}-\ac{mri}, \ac{dce}-\ac{mri}, and \ac{mrsi}. 
+Additionally, \ac{adc} map is based on the computation of a coefficient derived from multiple \ac{dw}-\ac{mri}.
+\textbf{Currently, no \ac{cad} system has been developed using all the available modalities and thus discarding their potential discriminating power to diagnose prostate cancer.}
+\input{./content/proposal/figures/cad}
+The closest attempts used three of these modalities (i.e., \ac{t2w}-\ac{mri}, \ac{dw}-\ac{mri}, \ac{dce}-\ac{mri}) and discarded \ac{mrsi}~\footcite{Litjens2014}\textsuperscript{,}\footcite{Viswanath2011}.
+This latter, however, has been shown to be extremely helpful to grade cancer aggressiveness particularly in the \ac{cg}~\footcite{Vos2015}, which is the most challenging zone in terms of cancer detection.
+\textbf{Furthermore, the current researches solely focus on the delineation of prostate cancers rather than on the cancer aggressiveness assessment.}
 
-\paragraph{Research objectives}
+Therefore, the aim of this project is to design a \ac{cad} system able to both detect and assess prostate cancers using all currently available multi-parametric \ac{mri} modalities.
+The architecture of our \ac{cad} system will imply the following investigations: 
+\begin{enumerate}
+\item Pre-processing to enhance the quality of \ac{mri} images (bias field correction, denoising, and normalisation),
+\item Segmentation of prostate zones using multi-parametric \ac{mri} and deep-learning,
+\item Registration of multi-parametric \ac{mri} using spline-based non-linear differmorphism,
+\item Detection and assessment of prostate cancers using using multi-parametric \ac{mri} and deep-learning,
+\item Identification of markers by inspection of the neural-network and transfer to classical machine learning approach.
+\end{enumerate}
+These methodologies will be extensively presented and argued in Sect.\,\ref{sec:methodologies}.
 
-\paragraph{Overview of the actions}
+\subsubsection{Research methodologies}
+\label{sec:methodologies}
 
-\subsubsection{Research methodology and approach}
+\paragraph{Pre-processing}
 
-\subsubsection{Originality and innovative aspects of the research programme}
+\Ac{mri} images are corrupted by different phenomena: (i) bias field, (ii) noise, and (iii) inter-patient variations.
+In this regard, particular attention to correct each of these drawbacks will be addressed.
+
+\Ac{mri} images are affected by the inhomogeneity of the \ac{mri} field called bias field, resulting in a smooth variation of the intensities.
+Although bias correction methods are commonly used to enhance brain \ac{mri} images~\footcite{Vovk2007}, only one \ac{cad} system for prostate has reported to use such pre-processing~\footcite{Viswanath2009}.
+The same authors performed an empirical evaluation of the state-of-the-art methods~\footcite{viswanath2011empirical} concluding that N3 algorithm~\footcite{Sled1998} yields to better classification results than other methods~\footcite{Styner2000}\textsuperscript{,}\footcite{Cohen2000}.
+Recently, Lin~\emph{et al.}~\footcite{Lin2011} proposed a method combining the N3 algorithm with the FCM algorithm~\footcite{Ahmed2002} which outperforms the original methods in terms of breast segmentation.
+\textbf{Therefore, we will perform an empirical comparison of these state-of-the-art methods~\footcite{Sled1998}\textsuperscript{,}\footcite{Styner2000}\textsuperscript{,}\footcite{Cohen2000}\textsuperscript{,}\footcite{Lin2011}, by ensuring the benefits of the method of Lin~\emph{et al.} for our specific application.}
+
+Apart of the bias field, \Ac{mri} images are also degraded due to a Rician noise.
+Similarly to bias correction, only two \ac{cad} systems for prostate denoised images using wavelet-based techniques~\footcite{Mallat2008}\textsuperscript{,}\footcite{Pizurica2003}, offering a proper theoretical baseline for Rician corruption~\footcite{Nowak1999}.
+Non-Local Means-based denoising techniques have never been used for \ac{mri} prostate images, but extensively and successfully for other \ac{mri} applications~\footcite{Manjon2008}.
+\textbf{Thus, we will perform an empirical evaluation of the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique\footcite{Pizurica2003} to select the appropriate method to our application.}
+
+
+
+
+
+
+Bias correction using Styner and Ahmed.
+Noise reduction apply non local mean specifically for MRI noise with Rician models which have been extensively used for brain imaging and all type of modalities. adaptive non local mean.
+T2W normalisation, DCE normalisation, ADC normalisation.
+
+\paragraph{Segmentation}
+
+\paragraph{Registration}
+
+\paragraph{Detection and assessment}
 
 \subsection{Clarity and quality of transfer of knowledge/training for the development of the researcher in light of the research objectives}
 \label{sec:transfer}
@@ -38,4 +86,3 @@ In addition, the investigators of the trial has come to the conclusion that the 
 
 \subsection{Capacity of the researcher to reach and re-enforce a position of professional maturity in research}
 \label{sec:maturity}
-
