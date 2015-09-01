@@ -5,6 +5,7 @@
 \label{sec:quality}
 
 \subsubsection{Introduction}
+\label{sec:introduction}
 
 In Europe, prostate cancer is reported to be the most frequently diagnosed cancer of men and thus one of the leading cause of death of cancer~\footcite{Ferlay2013}. 
 Currently, addressing this issue is a major public debate, in which the implementation of appropriate screening methods and subsequent treatments is key.
@@ -12,8 +13,8 @@ Currently, addressing this issue is a major public debate, in which the implemen
 In this regard, the \ac{erspc} is conducted to investigate the potential benefits of a population-based screening~\footcite{Schroder2015}. 
 The screening consists of a \ac{psa} test and depending of the \ac{psa} level measured, an additional ``blind'' biopsy is carried out. 
 Despite the fact of a significant reduction of the prostate cancer mortality, the screening strategy employed suffers of a high rate of over-diagnosis and over-treatment~\cite{Delpierre2013,Schroder2015}, due to the fact that prostate cancer growth is characterized by two main types of evolution: slow and fast.
-The slow-growing tumours account for up to 85 \% of all cancers and stay confined to the prostate gland, while the fast-growing tumours rapidly develop and metastasise to other organs, significantly affecting the morbidity and mortality rate.
-Furthermore, prostate cancer is more likely to develop in specific regions of the prostate: around 70-80 \% of prostate cancers originate in the \ac{pz}, whereas 10-20 \% in the \ac{cg}, but appear to be more aggressive and more likely to invade other organs. 
+The slow-growing tumours account for up to~85~\% of all cancers and stay confined to the prostate gland, while the fast-growing tumours rapidly develop and metastasise to other organs, significantly affecting the morbidity and mortality rate.
+Furthermore, prostate cancer is more likely to develop in specific regions of the prostate: around~70-80~\% of prostate cancers originate in the \ac{pz}, whereas~10-20~\% in the \ac{cg}, but appear to be more aggressive and more likely to invade other organs. 
 \textbf{Thus, additionally to cancer detection, the screening methods need to provide an estimate of the cancer aggressiveness to allow clinicians to act accordingly.}
 
 In addition, the investigators of the \ac{erspc} have come to the conclusion that the use of \emph{``multi-parametric \ac{mri} and the development of new markers are the hope for the future''}.
@@ -40,6 +41,8 @@ These methodologies will be extensively presented and argued in Sect.\,\ref{sec:
 
 \subsubsection{Research methodologies}
 \label{sec:methodologies}
+
+\paragraph{Data acquisition}
 
 \paragraph{Pre-processing}
 
@@ -71,11 +74,18 @@ This set of enhancement techniques already have been investigated by Lema\^itre~
 
 \paragraph{Segmentation}
 
-Litjens used t2w and adc to segment the prostate using multi-atlas method.
-Viswanath used an active shape model
-
-From the survey of Soumya, probabilistic atlas bring robustness and ASM accuracy.
-We can do an hybrid with machine learning and an ASM to refine
+To achieve robust cancer detection, the classification has to be carried out only on the prostate area, motivating the need to perform a segmentation of the organ in the \ac{mri} images.
+Furthermore, as mentioned in Sect.\,\ref{sec:introduction}), the membership \emph{a priori} of a voxel to a specific prostate zone has a high potential to increase the performance to evaluate the aggressiveness of prostate cancer.
+Therefore, the prostate zones need to be segmented instead of solely the prostate organ.
+In this regard, only the work of Litjens~\emph{et al.} performed a zonal segmentation of the prostate using probabilistic multi-atlas approach~\footcite{Litjens2014}.
+However, the segmentation was performed only considering the \ac{t2w}-\ac{mri} modality and the \ac{adc} map.
+Moreover, although atlas-based methods are robust to intensity variations, they lack of accuracy in the boundary delineations~\footcite{Ghose2012}.
+The potential of machine learning methods to carry out such task is currently underestimated, but has been shown to be suitable in combination with the other approach~\footcite{ghose2012graph}.
+\textbf{Thus, we will design a hybrid system based on \ac{cnn} and \ac{asm} using all multi-parametric images to perform zonal segmentation.}
+The choice of \ac{cnn} is motivated by the recent breakthrough of deep-learning in multiple fields of computer vision.
+Deep-learning, however, has still not be extensively used in the field of medical imaging as attested by the organisation of the first workshop specifically dedicated to this topic at MICCAI 2015. 
+Deep-learning relies on a data-driven training stage in which large amount of data are required, which is a serious drawback in medical imaging.
+However, this is the problematic tackled by the field of transfer learning which will allow to deploy deep-learning to medical imaging.
 
 \paragraph{Registration}
 
@@ -84,6 +94,13 @@ Mitra~\emph{et al.}~\footcite{Mitra2012a} developed an automatic multi-modal non
 This method was initially used for registration between \ac{t2w}-\ac{mri} and \ac{us} prostate images, \textbf{therefore, we will extend this method to align our multi-parametric \ac{mri} dataset.}
 
 \paragraph{Detection and assessment}
+
+Usual classification needs to extract the good features select them tranform them.
+Solve this drawbacks using CNN.
+Furthermore CNN can be used as well as regression and can guided with biopsy results.
+investigation of the network can lead to the extraction of new visual markers which can lead to the creation of BIRADS.
+It could also be interesting to transfer these markers to usual machine learning methods which allow more intervention in their designing process.
+
 
 \subsection{Clarity and quality of transfer of knowledge/training for the development of the researcher in light of the research objectives}
 \label{sec:transfer}
