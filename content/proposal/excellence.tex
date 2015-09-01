@@ -14,7 +14,7 @@ The screening consists of a \ac{psa} test and depending of the \ac{psa} level me
 Despite the fact of a significant reduction of the prostate cancer mortality, the screening strategy employed suffers of a high rate of over-diagnosis and over-treatment~\cite{Delpierre2013,Schroder2015}, due to the fact that prostate cancer growth is characterized by two main types of evolution: slow and fast.
 The slow-growing tumours account for up to 85 \% of all cancers and stay confined to the prostate gland, while the fast-growing tumours rapidly develop and metastasise to other organs, significantly affecting the morbidity and mortality rate.
 Furthermore, prostate cancer is more likely to develop in specific regions of the prostate: around 70-80 \% of prostate cancers originate in the \ac{pz}, whereas 10-20 \% in the \ac{cg}, but appear to be more aggressive and more likely to invade other organs. 
-\textbf{Thus, together with cancer detection, the screening methods need to provide an estimate of the cancer aggressiveness to allow clinicians to act accordingly.}
+\textbf{Thus, additionally to cancer detection, the screening methods need to provide an estimate of the cancer aggressiveness to allow clinicians to act accordingly.}
 
 In addition, the investigators of the \ac{erspc} have come to the conclusion that the use of \emph{``multi-parametric \ac{mri} and the development of new markers are the hope for the future''}.
 That is why, \ac{cad} systems revolved around mono- and multi-parametric \ac{mri} are currently developed by the medical imaging community, and were recently reviewed by Lema\^itre~\emph{et al.}~\footcite{Lemaitre2015}.
@@ -57,22 +57,25 @@ Similarly to bias correction, only two \ac{cad} systems for prostate denoised im
 Non-Local Means-based denoising techniques have never been used for \ac{mri} prostate images, but extensively and successfully for other \ac{mri} applications~\footcite{Manjon2008}.
 \textbf{Thus, we will perform an empirical evaluation of the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique\footcite{Pizurica2003} to select the appropriate method to our application.}
 
-
+\ac{cad} systems are based on machine learning classifiers which are trained to differentiate cancerous from healthy tissue.
+The classification performance of these classifiers highly relies on the consistency of the dataset.
+Subsequently, one can emphasize the desire to reduce the inter-patient variability of the \ac{mri} dataset.
+In this regard, each patient dataset needs to be standardised/normalised to common basis, modality by modality.
+Only two methods have been used in \ac{cad} for prostate: the first method consists in normalising the images via the $z$-score, while the second technique is based on a linear normalisation by parts~\footcite{Madabhushi2006a}.
+Lema\^itre~\emph{et al.}~\footnote{This work is submitted for publication.} developed a normalisation technique using the Rician properties of the \ac{mri} signal, which outperforms the previous methods for \ac{t2w}-\ac{mri} images.
+\textbf{Thus, we will extend this work to the other modalities \ac{dce}-\ac{mri} and \ac{dw}-\ac{mri}}.
 
 \ac{mrsi} is a modality related to one dimensional signal, thus enhancing techniques differs from the one used in \ac{mri}.
 The \ac{mrsi} spectra have to be corrected for several phenomena: phase correction, water and lipid residuals filtering, baseline correction, frequency alignment, and normalisation.
-This set of enhancement techniques already have been investigated by Lema\^itre~\emph{et al.}~\footcite{Lemaitre2011}, focusing solely on the \ac{mrsi} modality for prostate cancer detection.
-
-
-
-
-Bias correction using Styner and Ahmed.
-Noise reduction apply non local mean specifically for MRI noise with Rician models which have been extensively used for brain imaging and all type of modalities. adaptive non local mean.
-T2W normalisation, DCE normalisation, ADC normalisation.
+This set of enhancement techniques already have been investigated by Lema\^itre~\emph{et al.}~\footcite{Lemaitre2011}, in a study focusing solely on the \ac{mrsi} modality for prostate cancer detection; \textbf{this knowledge will be the basis of \ac{mrsi} enhancement.}
 
 \paragraph{Segmentation}
 
 \paragraph{Registration}
+
+In multi-parametric \ac{mri}, the data are collected in a sequential manner, involving a possible misalignment between the different modalities.
+Mitra~\emph{et al.}~\footcite{Mitra2012a} developed an automatic multi-modal non-rigid registration method, which has been shown to outperform the state-of-the-art methods.
+This method was initially used for registration between \ac{t2w}-\ac{mri} and \ac{us} prostate images, \textbf{therefore, we will extend this method to align our multi-parametric \ac{mri} dataset.}
 
 \paragraph{Detection and assessment}
 
