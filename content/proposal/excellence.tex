@@ -29,6 +29,7 @@ This latter, however, has been shown to be extremely helpful to grade cancer agg
 \textbf{Furthermore, the current researches solely focus on the delineation of prostate cancers rather than on the cancer aggressiveness assessment.}
 
 Therefore, the aim of this project is to design a \ac{cad} system able to both detect and assess prostate cancers using all currently available multi-parametric \ac{mri} modalities.
+{\color{red} drastically improve here}
 The architecture of our \ac{cad} system will imply the following investigations: 
 \begin{enumerate}
 \item Pre-processing to enhance the quality of \ac{mri} images (bias field correction, denoising, and normalisation),
@@ -36,6 +37,7 @@ The architecture of our \ac{cad} system will imply the following investigations:
 \item Registration of multi-parametric \ac{mri} using spline-based non-linear differmorphism,
 \item Detection and assessment of prostate cancers using using multi-parametric \ac{mri} and deep-learning,
 \item Identification of markers by inspection of the neural-network and transfer to classical machine learning approach.
+\item Grading using standard PI-RADS
 \end{enumerate}
 These methodologies will be extensively presented and argued in Sect.\,\ref{sec:methodologies}.
 
@@ -55,8 +57,7 @@ The same authors performed an empirical evaluation of the state-of-the-art metho
 Recently, Lin~\emph{et al.}~\footcite{Lin2011} proposed a method combining the N3 algorithm with the FCM algorithm~\footcite{Ahmed2002} which outperforms the original methods in terms of breast segmentation.
 \textbf{Therefore, we will perform an empirical comparison of these state-of-the-art methods~\footcite{Sled1998}\textsuperscript{,}\footcite{Styner2000}\textsuperscript{,}\footcite{Cohen2000}\textsuperscript{,}\footcite{Lin2011}, by ensuring the benefits of the method of Lin~\emph{et al.} for our specific application.}
 
-Apart of the bias field, \Ac{mri} images are also degraded due to a Rician noise.
-Similarly to bias correction, only two \ac{cad} systems for prostate denoised images using wavelet-based techniques~\footcite{Mallat2008}\textsuperscript{,}\footcite{Pizurica2003}, offering a proper theoretical baseline for Rician corruption~\footcite{Nowak1999}.
+Apart of the bias field, \Ac{mri} images are also degraded due to a Rician noise. Similarly to bias correction, only two \ac{cad} systems for prostate denoised images using wavelet-based techniques~\footcite{Mallat2008}\textsuperscript{,}\footcite{Pizurica2003}, offering a proper theoretical baseline for Rician corruption~\footcite{Nowak1999}.
 Non-Local Means-based denoising techniques have never been used for \ac{mri} prostate images, but extensively and successfully for other \ac{mri} applications~\footcite{Manjon2008}.
 \textbf{Thus, we will perform an empirical evaluation of the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique\footcite{Pizurica2003} to select the appropriate method to our application.}
 
@@ -95,12 +96,23 @@ This method was initially used for registration between \ac{t2w}-\ac{mri} and \a
 
 \paragraph{Detection and assessment}
 
-Usual classification needs to extract the good features select them tranform them.
-Solve this drawbacks using CNN.
-Furthermore CNN can be used as well as regression and can guided with biopsy results.
-investigation of the network can lead to the extraction of new visual markers which can lead to the creation of BIRADS.
-It could also be interesting to transfer these markers to usual machine learning methods which allow more intervention in their designing process.
+Up to know, the \ac{cad} systems developed solely focus on the detection of prostate cancers, omitting a real-assessment of the potential lesions detected.
+The detection of cancers is commonly performed using machine leaning classifiers, designing frameworks as depicted in Fig.\,\ref{fig:wkfcad}.
+These frameworks rely on two compulsory stages and an intermediate optional one: (i) features detection, (ii) features selection/extraction and (iii) features classification.
+Lema\^itre~\emph{et al.} extensively reviewed researches carried out in each of this stage for the development of \ac{cad} for prostate cancer~\footcite{Lemaitre2015}.
+These stages are organised in a sequential manner and thus stages upstream part of the features classification will have a tremendous importance on the classification performance.
+Consequently, the use of discriminative features is certainly key and most probably the bottleneck of \ac{cad} systems, justifying the attention given by researchers to evaluate multitude of low- and high-level visual features, inspired by computer vision or biology.
+As aforementioned, deep-learning has been recently shown to one of the most successful machine learning technique for broad types of classification tasks.
+\ac{cnn} has the ability to generate automatically low- and high-level visual features in the network itself~\footcite{Zeiler2013} by only supplying the raw data as inputs.
+Furthermore, \ac{cnn} can be trained using the Gleason grade obtained through biopsy in order to get an assessment of the aggressiveness of the cancer.
+\textbf{Thus, we will use \ac{cnn} to perform the detection and the assessment of prostate cancer. In addition, we will investigate the low- and high-level features to potentially find new bio-markers which can be used by clinicians or other machine learning methods.}
 
+\paragraph{Evaluation using \acs*{pirads}}
+
+The \ac{esur} together with the \ac{acr} recently published the \ac{pirads}, which is a standard way to assess and report prostate lesions using multi-parametric \ac{mri}.
+This standard allows to report a score depending of multiple criteria such as signal intensity, texture, size of lesion, modality, prostate zones, etc.
+None of the current \ac{cad} systems offer a \ac{pirads} score when detecting potential lesions in multi-parametric \ac{mri}.
+\textbf{Thus, we will report the output of our classification framework in terms of \ac{pirads} score, applying the provided criterion.}
 
 \subsection{Clarity and quality of transfer of knowledge/training for the development of the researcher in light of the research objectives}
 \label{sec:transfer}
