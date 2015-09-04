@@ -29,23 +29,38 @@ This latter, however, has been shown to be extremely helpful to grade cancer agg
 \input{./content/proposal/figures/cad}
 
 Therefore, the aim of this project is to design a \ac{cad} system able to both detect and assess prostate cancers using all currently available multi-parametric \ac{mri} modalities.
-{\color{red} drastically improve here
-The architecture of our \ac{cad} system will imply the following investigations: 
-\begin{enumerate}
-\item Pre-processing to enhance the quality of \ac{mri} images (bias field correction, denoising, and normalisation),
-\item Segmentation of prostate zones using multi-parametric \ac{mri} and deep-learning,
-\item Registration of multi-parametric \ac{mri} using spline-based non-linear differmorphism,
-\item Detection and assessment of prostate cancers using using multi-parametric \ac{mri} and deep-learning,
-\item Identification of markers by inspection of the neural-network and transfer to classical machine learning approach.
-\item Grading using standard PI-RADS
-\end{enumerate}
-}
+To achieve this goal, we will revisit the different stages of the \ac{cad} framework.
+First, we will insure to work with the most consistent data, enhancing them using different types of pre-processing.
+Subsequently, we will segment the prostate zones using multi-parametric \ac{mri} images 
+
+% {\color{red} drastically improve here
+% The architecture of our \ac{cad} system will imply the following investigations: 
+% \begin{enumerate}
+% \item Pre-processing to enhance the quality of \ac{mri} images (bias field correction, denoising, and normalisation),
+% \item Segmentation of prostate zones using multi-parametric \ac{mri} and deep-learning,
+% \item Registration of multi-parametric \ac{mri} using spline-based non-linear differmorphism,
+% \item Detection and assessment of prostate cancers using using multi-parametric \ac{mri} and deep-learning,
+% \item Identification of markers by inspection of the neural-network and transfer to classical machine learning approach.
+% \item Grading using standard PI-RADS
+% \end{enumerate}
+% }
 These methodologies will be extensively presented and argued in Sect.\,\ref{sec:methodologies}.
 
 \subsubsection{Research methodologies}
 \label{sec:methodologies}
 
-\paragraph{Data acquisition} {\color{red} We need to provide information about the dataset that we collected and that we try to make available to the public.}
+\paragraph{Data acquisition}
+
+A recurrent drawback in medical imaging is the unavailability of public dataset.
+In prostate 
+
+Data are the most important part of any project in medical imaging.
+Currently, no multi-parametric \ac{mri} prostate dataset is publicly available.
+It implies that there is no any possibility to compare the different \ac{cad} systems developed in the literature.
+Recently, Lema\^itre~\emph{et al.}, however, launch a beta version of a platform in which a multi-parametric dataset is delivered.
+The dataset is composed of two subset which were acquired with two different scanners.
+The four modalities are present inside this dataset.
+The annotations were performed by two experienced radiologists as well as biopsy information.
 
 \paragraph{Pre-processing}
 
