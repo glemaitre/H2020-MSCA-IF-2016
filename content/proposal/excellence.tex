@@ -11,7 +11,7 @@ In Europe, prostate cancer is reported to be the most frequently diagnosed cance
 Currently, addressing this issue is a major public debate, in which the implementation of appropriate screening methods and subsequent treatments is key.
 In this regard, the \ac{erspc} is conducted to investigate the potential benefits of a population-based screening~\footcite{Schroder2015}. 
 The screening consists of a \ac{psa} test and depending of the \ac{psa} level measured, an additional ``blind'' biopsy is carried out. 
-Despite that mortality significantly decreases, the employed screening strategy suffers of a high rate of over-diagnosis and over-treatment~\cite{Delpierre2013,Schroder2015}, due to the fact that prostate cancers grow either slowly or fast.
+Despite that mortality significantly decreases, the employed screening strategy suffers of a high rate of over-diagnosis and over-treatment~\footcite{Delpierre2013}, due to the fact that prostate cancers grow either slowly or fast.
 The slow-growing tumours account for up to~85~\% of all cancers and stay confined to the prostate gland, while the fast-growing tumours rapidly develop and metastasise to other organs, significantly affecting the morbidity and mortality rate.
 Furthermore, prostate cancer is more likely to develop in specific regions of the prostate: around~70-80~\% of prostate cancers originate in the \ac{pz}, whereas~10-20~\% in the \ac{cg}, but are more aggressive and more likely to invade other organs. 
 \textbf{Thus, additionally to cancer detection, the screening methods need to estimate the cancer aggressiveness to allow clinicians to act accordingly.}
@@ -69,12 +69,12 @@ In this regard, particular attention to correct each of these drawbacks will be 
 Although bias correction methods are commonly used to enhance brain \ac{mri} images~\footcite{Vovk2007}, only one \ac{cad} system for prostate has reported to use such pre-processing~\footcite{Viswanath2009}.
 The same authors have empirically evaluated the state-of-the-art methods~\footcite{viswanath2011empirical} concluding that N3 algorithm~\footcite{Sled1998} yields to better classification performance than other methods~\footcite{Styner2000}\textsuperscript{,}\footcite{Cohen2000}.
 Recently, Lin~\emph{et al.}~\footcite{Lin2011} have proposed a method combining the N3 algorithm with the FCM algorithm~\footcite{Ahmed2002} which outperforms the original methods, in terms of breast segmentation.
-\textbf{Therefore, we will compare these state-of-the-art methods~\footcite{Sled1998}\textsuperscript{,}\footcite{Styner2000}\textsuperscript{,}\footcite{Cohen2000}\textsuperscript{,}\footcite{Lin2011}, by ensuring the benefit of the method of Lin~\emph{et al.} for our specific application.}
+\textbf{Therefore, we will compare these state-of-the-art methods, by ensuring the benefit of the method of Lin~\emph{et al.} for our specific application.}
 
 Apart of the bias field, \Ac{mri} images are also degraded by a Rician noise. 
 Similarly to bias correction, only two \ac{cad} systems have filtered the images using wavelet-based techniques~\footcite{Mallat2008}\textsuperscript{,}\footcite{Pizurica2003}, which offer a proper theoretical baseline for Rician corruption~\footcite{Nowak1999}.
 Non-Local Means-based denoising techniques have extensively and successively been used for other \ac{mri} applications, but never for \ac{mri} prostate images~\footcite{Manjon2008}.
-\textbf{Thus, we will evaluate the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique\footcite{Pizurica2003} to select the appropriate method to our application.}
+\textbf{Thus, we will evaluate the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique to select the appropriate method to our application.}
 
 \ac{cad} systems are based on machine learning classifiers which are trained to differentiate cancerous from healthy tissue.
 The classification performance of these classifiers highly relies on the consistency of the dataset.
@@ -93,7 +93,7 @@ This set of enhancement techniques has already been investigated by Lema\^itre~\
 To achieve robust cancer detection, the classification has to be carried out only on the prostate area, motivating the need to perform a segmentation of the organ in the \ac{mri} images.
 Furthermore, as mentioned in Sect.\,\ref{sec:introduction}, the membership \emph{a-priori} of a voxel to belong to a zone (i.e., \ac{pz} or \ac{cg}) has a high potential to increase the performance to assess the aggressiveness of prostate cancer.
 Therefore, the prostate zones need to be segmented instead of solely the prostate organ.
-In this regard, only the work of Litjens~\emph{et al.} have segmented the prostate zones using a probabilistic multi-atlas approach~\footcite{Litjens2014}.
+In this regard, only the work of Litjens~\emph{et al.} have segmented the prostate zones using a probabilistic multi-atlas approach~\footcite{Litjens2014a}.
 However, the segmentation was performed using only the \ac{t2w}-\ac{mri} modality and the \ac{adc} map.
 Although atlas-based methods are robust to intensity variations, they lack of accuracy in the boundary delineations~\footcite{Ghose2012}.
 The potential of machine learning methods to carry out such task is currently underestimated, but has been shown to be suitable in combination with the other approaches (i.e., deformable models or atlas-based)~\footcite{ghose2012graph}.
