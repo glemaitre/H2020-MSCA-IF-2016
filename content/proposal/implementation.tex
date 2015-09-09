@@ -3,23 +3,86 @@
 
 \subsection{Overall coherence and effectiveness of the work plan}
 
-The proposal is separated into 7 work packages:
+The proposal is split into 8 work packages (WPx) and subdivided into tasks (Tx):
 
-\begin{description}
-\item[WP1: Data acquisition and dissemination (duration of 5 months)]
+\begin{itemize}[noitemsep]
+\item[] \textbf{WP1: Data acquisition and dissemination (duration of 5 months)}
+  \begin{itemize}[noitemsep,nolistsep]
+  \item[] \textbf{T1.1} Prepare the multi-parametric \ac{mri} dataset
+  \item[] \textbf{T1.2} Finalise the web-platform
+  \item[] \textbf{T1.3} Publicly publish the dataset
+  \item[] \textbf{T1.4} Organise a \emph{Grand-challenge}
+  \end{itemize}
+\item[] \textbf{WP2: Pre-processing (duration of 7 months)}
+  \begin{itemize}[noitemsep,nolistsep]
+  \item[] \textbf{T2.1} Evaluate the bias field correction methods on our public dataset (1.3)
+  \item[] \textbf{T2.2} Evaluate the denoising methods on our public dataset (1.3)
+  \item[] \textbf{T2.3} Extend the normalisation methods on our public dataset (1.3)
+  \item[] \textbf{T2.4} Apply and evaluate \ac{mrsi} pre-processing methods on our public dataset (1.3)
+  \end{itemize}
+\item[] \textbf{WP3: Segmentation (duration of 7 months)}
+  \begin{itemize}[noitemsep,nolistsep]
+  \item[] \textbf{T3.1} Design the hybrid segmentation method
+  \item[] \textbf{T3.2} Develop the segmentation
+  \item[] \textbf{T3.3} Validate the segmentation method on our public dataset (1.3)
+  \end{itemize}
+\item[] \textbf{WP4: Registration (duration of 7 months)}
+  \begin{itemize}[noitemsep,nolistsep]
+  \item[] \textbf{T4.1} Extend the current registration method
+  \item[] \textbf{T4.2} Validate the registration method on our public dataset (1.3)
+  \end{itemize}
+\item[] \textbf{WP5: Detection and assessment (duration of 8 months)}
+  \begin{itemize}[noitemsep,nolistsep]
+  \item[] \textbf{T5.1} Design the classifier architecture
+  \item[] \textbf{T5.2} Develop the classifier
+  \item[] \textbf{T5.3} Validate the classifier on our public dataset (1.3)
+  \end{itemize}
+\item[] \textbf{WP6: \ac{pirads} evaluation (duration of 2 months)}
+  \begin{itemize}[noitemsep,nolistsep]
+  \item[] \textbf{T6.1} Transpose the \ac{pirads} markers to computer vision marker
+  \item[] \textbf{T6.2} Develop the \ac{pirads}-based grading
+  \item[] \textbf{T6.3} Validate this approach on our public dataset (1.3)
+  \end{itemize}
+\item[] \textbf{WP7: Communication to general public (duration of 36 months)}
+  \begin{itemize}[noitemsep,nolistsep]
+  \item[] \textbf{T7.1} Internal seminars in FSU and UdG
+  \item[] \textbf{T7.2} Publish in general public press such as \emph{Engega} 
+  \item[] \textbf{T7.3} Scientific blog with periodic entries 
+  \item[] \textbf{T7.4} Enrollment to educational workshop such as \emph{Yong Research Campus} at UdG
+  \end{itemize}
+\item[] \textbf{WP8: Scientific dissemination (duration of 36 months)}
+  \begin{itemize}[noitemsep,nolistsep]
+  \item[] \textbf{T8.1} Maintenance of the web-platform by publishing code and results
+  \item[] \textbf{T8.2} Publish the works in peer-review journals
+  \item[] \textbf{T8.3} Publish the works in peer-review international conferences
+  \end{itemize}
+\end{itemize}
 
+The following deliverables (Dx) will be released during the project:
 
-  \begin{description}
-  \item[T1.1] Preparation of the multi-parametric \ac{mri} dataset
-  \item[T1.1] Preparation of the multi-parametric \ac{mri} dataset
-  \end{description}
-\item[WP2: Pre-processing (duration of 7 months)]
-\item[WP3: Segmentation (duration of 7 months)]
-\item[WP4: Registration (duration of 7 months)]
-\item[WP5: Detection and assessment (duration of 8 months)]
-\item[WP6: \ac{pirads} evaluation (duration of 2 months)]
-\item[WP7: Communication (duration of 36 months)]
-\end{description}
+\begin{itemize}[noitemsep]
+\item[] \textbf{D1.1} Multi-parametric \ac{mri} database
+\item[] \textbf{D2.1} Software toolbox for multi-parametric \ac{mri} images pre-processing
+\item[] \textbf{D3.1} Software toolbox for multi-parametric \ac{mri} images registration
+\item[] \textbf{D4.1} Software toolbox for multi-parametric \ac{mri} images segmentation
+\item[] \textbf{D5.1} Software toolbox for multi-parametric \ac{mri} images classification
+\item[] \textbf{D6.1} Software toolbox for \ac{pirads} grading
+\end{itemize}
+
+To achieve the proposed goals, the following milestones (Mx) are defined:
+
+\begin{itemize}[noitemsep]
+\item[] \textbf{M1.1} Deadline December 2016 --- Grand-Challenge submission at the conference MICCAI 2017, ``Prostate detection and grading using multi-parametric \ac{mri}''
+\item[] \textbf{M2.1} Deadline October 2016 --- Paper submission at the conference ISBI 2017, ``Empirical evaluation of bias field correction methods for multi-parametric \ac{mri}''
+\item[] \textbf{M2.2} Deadline October 2016 --- Paper submission at the conference ISBI 2017, ``Empirical evaluation of noise reduction methods for multi-parametric \ac{mri}''
+\item[] \textbf{M2.3} Deadline March 2017 --- Paper submission at the conference MICCAI 2017, ``Normalisation techniques for multi-parametric \ac{mri}''
+\item[] \textbf{M2.4} Deadline March 2017 --- Paper submission to a peer-review journal, ``Pre-processing tools for multi-parametric \ac{mri}''
+\item[] \textbf{M3.1} Deadline October 2017 --- Submission to PROMISE12 challenge of results using only \ac{t2w}-\ac{mri}
+\item[] \textbf{M3.2} Deadline October 2017 --- Paper submission to peer-review journal \emph{Medical Image Analysis}, ``Zonal segmentation of the prostate using deep-learning and multi-parametric \ac{mri}''
+\item[] \textbf{M4.1} Deadline June 2018 --- Paper submission at the conference ICIP 2018, ``Prostate registration using multi-parametric \ac{mri} and spline-based non-linear diffeomorphism''
+\item[] \textbf{M5.1} Deadline January 2019 --- Paper submission to peer-review journal \emph{IEEE Transactions on Medical Imaging}, ``Prostate cancer detection and assessment using deep-learning and multi-parametric \ac{mri}''
+\item[] \textbf{M6.1} Deadline March 2019 --- Paper submission to peer-review journal \emph{Journal of Magnetic Resonance Imaging}, ``Evaluation of a prostate \ac{cad} systems using \ac{pirads}''
+\end{itemize}
 
 \subsection{Appropriateness of the management structure and procedures, including quality management and risk management}
 
@@ -39,47 +102,116 @@ The following could be also included in the Gantt Chart:
 
 \begin{landscape}
 
-\begin{figure}[htbp]
-\begin{center}
+  \begin{figure}[htbp]
+    \begin{center}
 
-\begin{ganttchart}[
-    canvas/.append style={fill=none, draw=black!5, line width=.75pt},
-    hgrid style/.style={draw=black!5, line width=.75pt},
-    vgrid={*1{draw=black!5, line width=.75pt}},
-    title/.style={draw=none, fill=none},
-    title label font=\bfseries\footnotesize,
-    title label node/.append style={below=7pt},
-    include title in canvas=false,
-    bar label font=\small\color{black!70},
-    bar label node/.append style={left=2cm},
-    bar/.append style={draw=none, fill=black!63},
-    bar progress label font=\footnotesize\color{black!70},
-    group left shift=0,
-    group right shift=0,
-    group height=.5,
-    group peaks tip position=0,
-    group label node/.append style={left=.6cm},
-    group progress label font=\bfseries\small
-  ]{1}{24}
-  \gantttitle[
-    title label node/.append style={below left=7pt and -3pt}
-  ]{Month:\quad1}{1}
-  \gantttitlelist{2,...,24}{1} \\
-  \ganttgroup{Work Package}{1}{10} \\
-  \ganttgroup{Deliverable}{5}{15} \\
-  \ganttgroup{Milestone}{5}{5} \\
-  \ganttgroup{Secondment}{20}{23} \\
-  \ganttgroup{Conference}{16}{16} \\
-  \ganttgroup{Workshop}{17}{17} \\
-  \ganttgroup{Seminar}{18}{18} \\
-  \ganttgroup{Dessemination}{23}{24} \\
-  \ganttgroup{Public engagement}{4}{5} \\
-  \ganttgroup{Other}{7}{10}
-\end{ganttchart}
+      \begin{ganttchart}[
+        y unit chart=.35cm,
+        canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+        hgrid style/.style={draw=black!5, line width=.75pt},
+        vgrid={*1{draw=black!5, line width=.75pt}},
+        title/.style={draw=none, fill=none},
+        title label font=\bfseries\footnotesize,
+        title label node/.append style={below=7pt},
+        include title in canvas=false,
+        bar label font=\small\color{black!70},
+        bar label node/.append style={left=2cm},
+        bar/.append style={draw=none, fill=black!63},
+        bar progress label font=\footnotesize\color{black!70},
+        bar height=.7,
+        group left shift=0,
+        group right shift=0,
+        group height=.5,
+        group peaks tip position=0,
+        group label node/.append style={left=.6cm},
+        group progress label font=\footnotesize,
+        group label font=\small\color{black},
+        %group top shift=.6,
+        milestone/.append style={fill=orange!70}
+        ]{1}{36}
+        \gantttitle[
+        title label node/.append style={below left=7pt and -3pt}
+        ]{Month:\quad1}{1}
+        \gantttitlelist{2,...,36}{1} \\
+        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP1}{1}{5}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T1.1}{1}{3}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T1.2}{1}{4}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T1.3}{5}{5}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T1.4}{5}{10}\\
+        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP2}{6}{12}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T2.1}{6}{7}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T2.2}{8}{9}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T2.3}{10}{11}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T2.4}{12}{12}\\
+        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP3}{13}{19}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T3.1}{13}{14}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T3.2}{16}{17}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T3.3}{18}{19}\\
+        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP4}{20}{26}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T4.1}{20}{21}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T4.2}{22}{24}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T4.3}{25}{26}\\
+        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP5}{27}{34}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T5.1}{27}{28}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T5.2}{29}{32}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T5.3}{33}{34}\\
+        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP6}{35}{36}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T6.1}{35}{35}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T6.2}{35}{35}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T6.3}{36}{36}\\
+        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP7}{1}{36}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T7.1}{1}{36}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T7.2}{6}{6}
+        \ganttbar[bar/.append style={fill=Green!70}]{}{12}{12}
+        \ganttbar[bar/.append style={fill=Green!70}]{}{18}{18}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T7.3}{1}{36}\\
+        \ganttbar[bar/.append style={fill=Green!70}]{T1.4}{5}{10}\\
+        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP8}{1}{36}\\
+        \ganttdeliv[inline]{D1.1}{5}{5}
+        \ganttdeliv[inline]{D2.1}{12}{12}
+        \ganttdeliv[inline]{D3.1}{19}{19}
+        \ganttdeliv[inline]{D4.1}{26}{26}
+        \ganttdeliv[inline]{D5.1}{34}{34}
+        \ganttdeliv[inline]{D6.1}{36}{36} \\
+        \ganttmile[inline]{M1.1}{10}{10}
+        \ganttmile[inline]{M2.1}{8}{8}
+        \ganttmile[inline]{M2.2}{8}{8}
+        \ganttmile[inline]{M2.3}{13}{13}
+        \ganttmile[inline]{M2.4}{13}{13}
+        \ganttmile[inline]{M3.1}{20}{20}
+        \ganttmile[inline]{M3.2}{20}{20}
+        \ganttmile[inline]{M4.1}{28}{28}
+        \ganttmile[inline]{M5.1}{34}{34}
+        \ganttmile[inline]{M6.1}{36}{36} \\
+        % \ganttgroup[group/.append style={fill=yellow!70}]{WP1}{1}{5} \\
+        % \ganttbar[bar/.append style={fill=OliveGreen!50}]{D1.1}{5}{5} \\
+        % \ganttmilestone{M1.1}{10} \\
+        % \ganttgroup[group/.append style={fill=yellow!70}]{WP2}{5}{12} \\
+        % \ganttbar[bar/.append style={fill=OliveGreen!50}]{D2.1}{12}{12} \\
+        % \ganttmilestone{M2.1}{8} \\
+        % \ganttmilestone{M2.2}{8} \\
+        % \ganttmilestone{M2.3}{13} \\
+        % \ganttmilestone{M2.4}{12} \\
+        % \ganttgroup[group/.append style={fill=yellow!70}]{WP3}{12}{19} \\
+        % \ganttbar[bar/.append style={fill=OliveGreen!50}]{D3.1}{19}{19} \\
+        % \ganttmilestone{M3.1}{19} \\
+        % \ganttmilestone{M3.1}{19} \\
+        % \ganttgroup[group/.append style={fill=yellow!70}]{WP4}{19}{26} \\
+        % \ganttbar[bar/.append style={fill=OliveGreen!50}]{D4.1}{26}{26} \\
+        % \ganttmilestone{M4.1}{26} \\        
+        % \ganttgroup[group/.append style={fill=yellow!70}]{WP5}{26}{34} \\
+        % \ganttbar[bar/.append style={fill=OliveGreen!50}]{D5.1}{34}{34} \\
+        % \ganttmilestone{M5.1}{34} \\
+        % \ganttgroup[group/.append style={fill=yellow!70}]{WP6}{34}{36} \\
+        % \ganttbar[bar/.append style={fill=OliveGreen!50}]{D6.1}{36}{36} \\
+        % \ganttmilestone{M6.1}{36} \\
+        %\ganttgroup[group/.append style={fill=yellow!70}]{WP7}{1}{36} \\
+        %\ganttgroup[group/.append style={fill=yellow!70}]{WP8}{1}{36} \\
+      \end{ganttchart}
 
-\end{center}
-\caption{Example Gantt Chart}
-\end{figure}
+    \end{center}
+    \caption{Example Gantt Chart}
+  \end{figure}
 
 \end{landscape}
 

@@ -1,6 +1,7 @@
 \documentclass[a4paper,11pt]{article}
 
 \usepackage{pdflscape}
+\usepackage{enumitem}
 
 %% Latex documents that need direct input
 \input{latex/filesystem/package.tex}        % contains the latex packages
@@ -16,6 +17,42 @@
 %\includeonly{./content/cv/cv}
 
 \addbibresource{./content/lit_review.bib}
+
+\newganttchartelement*{deliv}{
+deliv/.style={
+  shape=rectangle,
+  inner sep=0pt,
+  draw=blue!30,
+  fill=blue!30
+  },
+deliv incomplete/.style={
+  /pgfgantt/deliv,
+  draw=yellow,
+  bottom color=yellow!50
+  },
+deliv label font=\tiny\color{black},
+deliv left shift=0pt,
+deliv right shift=0pt,
+deliv height=.9
+}
+
+\newganttchartelement*{mile}{
+mile/.style={
+  shape=rectangle,
+  inner sep=0pt,
+  draw=Bittersweet!30,
+  fill=Bittersweet!30
+  },
+mile incomplete/.style={
+  /pgfgantt/mile,
+  draw=Bittersweet,
+  bottom color=Bittersweet!50
+  },
+mile label font=\tiny\color{black},
+mile left shift=0pt,
+mile right shift=0pt,
+mile height=.9
+}
 
 \begin{document}
 \input{latex/first_page.tex}
@@ -51,8 +88,6 @@
 \let\citeBk=\cite
 \let\cite=\footcite
 \renewcommand{\footnotesize}{\scriptsize}
-
-That will be the abstract of the proposal
 
 %% Incldue the content without .tex extension
 % \acresetall  % reset the acronyms from the abstract
