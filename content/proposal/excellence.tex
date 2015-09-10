@@ -7,11 +7,11 @@
 \subsubsection{Introduction}
 \label{sec:introduction}
 
-In Europe, prostate cancer is reported to be the most frequently diagnosed cancer of men and thus one of the leading cause of death of cancer~\footcite{Ferlay2013}. 
-Currently, addressing this issue is a major public debate, in which the implementation of appropriate screening methods and subsequent treatments is key.
+In Europe, prostate cancer is reported to be the most frequently diagnosed cancer among men and thus one of the leading causes of death of cancer~\footcite{Ferlay2013}. 
+Currently, addressing this issue is a major public debate, where the implementation of appropriate screening methods and subsequent treatments is key.
 In this regard, the \ac{erspc} is conducted to investigate the potential benefits of a population-based screening~\footcite{Schroder2015}. 
 The screening consists of a \ac{psa} test and depending of the \ac{psa} level measured, an additional ``blind'' biopsy is carried out. 
-Despite that mortality significantly decreases, the employed screening strategy suffers of a high rate of over-diagnosis and over-treatment~\footcite{Delpierre2013}, due to the fact that prostate cancers grow either slowly or fast.
+Despite that mortality significantly has been decreasing, the employed screening strategy suffers of a high rate of over-diagnosis and over-treatment~\footcite{Delpierre2013}, due to the fact that prostate cancers grow either slowly or fast.
 The slow-growing tumours account for up to~85~\% of all cancers and stay confined to the prostate gland, while the fast-growing tumours rapidly develop and metastasise to other organs, significantly affecting the morbidity and mortality rate.
 Furthermore, prostate cancer is more likely to develop in specific regions of the prostate: around~70-80~\% of prostate cancers originate in the \ac{pz}, whereas~10-20~\% in the \ac{cg}, but are more aggressive and more likely to invade other organs. 
 \textbf{Thus, additionally to cancer detection, the screening methods need to estimate the cancer aggressiveness to allow clinicians to act accordingly.}
@@ -24,7 +24,7 @@ Additionally, \ac{adc} map is based on the computation of a coefficient derived 
 \textbf{Currently, no \ac{cad} system has been developed using all the available modalities and thus discarding their potential discriminating power to diagnose prostate cancer.}
 The closest attempts have used three of these modalities (i.e., \ac{t2w}-\ac{mri}, \ac{dw}-\ac{mri}, \ac{dce}-\ac{mri}) and have discarded \ac{mrsi}~\footcite{Litjens2014}\textsuperscript{,}\footcite{Viswanath2011}.
 This latter, however, has been shown to be extremely helpful to grade cancer aggressiveness particularly in the \ac{cg}~\footcite{Vos2015}, which is the most challenging zone in terms of cancer detection.
-\textbf{Furthermore, the current researches solely focus on the delineation of prostate cancers rather than on the cancer aggressiveness assessment.}
+\textbf{Furthermore, the current research solely focus on the delineation of prostate cancers rather than on the cancer aggressiveness assessment.}
 
 \input{./content/proposal/figures/cad}
 
@@ -51,19 +51,19 @@ These methodologies will be extensively presented and argued in Sect.\,\ref{sec:
 
 \paragraph{Data acquisition}
 
-The unavailability of public dataset in medical imaging is a major drawback.
+The unavailability of a public dataset in medical imaging is a major drawback.
 Currently, no multi-parametric \ac{mri} prostate data are publicly available, implying that no fair comparisons can be drawn between the different developed \ac{cad} systems.
 Recently, Lema\^itre~\emph{et al.} launch a beta web-platform~\footnote{\texttt{http://visor.udg.edu/i2cvb/}} intended for reporting the evaluation of \ac{cad} systems.
 A multi-parametric \ac{mri} dataset is made available, containing 60 patients and the following modalities: \ac{t2w}-\ac{mri}, \ac{dw}-\ac{mri}, \ac{dce}-\ac{mri}, and \ac{mrsi}.
 Furthermore, the data are acquired from both 1.5 T and 3.0 T \ac{mri} scanner.
 Multiple ground-truths (i.e., prostate zones, cancer lesions) are compiled by experienced radiologists and additional biopsy tests.
-However, the web-platform need to be finalised before to be fully available.
+However, the web-platform needs to be completed before being made fully available.
 \textbf{Consequently, we will finalise the dataset and release it publicly through our web-platform.}
 
 \paragraph{Pre-processing}
 
 \Ac{mri} images are corrupted by different phenomena: (i) bias field, (ii) noise, and (iii) inter-patient variations.
-In this regard, particular attention to correct each of these drawbacks will be addressed.
+In this regard, particular attention to correct each of these drawbacks will be given.
 
 \Ac{mri} images are affected by the inhomogeneity of the \ac{mri} field called bias field, resulting in a smooth variation of the intensities across each image.
 Although bias correction methods are commonly used to enhance brain \ac{mri} images~\footcite{Vovk2007}, only one \ac{cad} system for prostate has reported to use such pre-processing~\footcite{Viswanath2009}.
@@ -71,10 +71,10 @@ The same authors have empirically evaluated the state-of-the-art methods~\footci
 Recently, Lin~\emph{et al.}~\footcite{Lin2011} have proposed a method combining the N3 algorithm with the FCM algorithm~\footcite{Ahmed2002} which outperforms the original methods, in terms of breast segmentation.
 \textbf{Therefore, we will compare these state-of-the-art methods, by ensuring the benefit of the method of Lin~\emph{et al.} for our specific application.}
 
-Apart of the bias field, \Ac{mri} images are also degraded by a Rician noise. 
+Apart from the bias field, \Ac{mri} images are also degraded by a Rician noise. 
 Similarly to bias correction, only two \ac{cad} systems have filtered the images using wavelet-based techniques~\footcite{Mallat2008}\textsuperscript{,}\footcite{Pizurica2003}, which offer a proper theoretical baseline for Rician corruption~\footcite{Nowak1999}.
 Non-Local Means-based denoising techniques have extensively and successively been used for other \ac{mri} applications, but never for \ac{mri} prostate images~\footcite{Manjon2008}.
-\textbf{Thus, we will evaluate the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique to select the appropriate method to our application.}
+\textbf{Thus, we will evaluate the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique to select the appropriate method for our application.}
 
 \ac{cad} systems are based on machine learning classifiers which are trained to differentiate cancerous from healthy tissue.
 The classification performance of these classifiers highly relies on the consistency of the dataset.
@@ -90,18 +90,18 @@ This set of enhancement techniques has already been investigated by Lema\^itre~\
 
 \paragraph{Segmentation}
 
-To achieve robust cancer detection, the classification has to be carried out only on the prostate area, motivating the need to perform a segmentation of the organ in the \ac{mri} images.
-Furthermore, as mentioned in Sect.\,\ref{sec:introduction}, the membership \emph{a-priori} of a voxel to belong to a zone (i.e., \ac{pz} or \ac{cg}) has a high potential to increase the performance to assess the aggressiveness of prostate cancer.
+To achieve robust cancer detection, the classification has to be carried out only in the prostate area, motivating the need to perform a segmentation of the organ in the \ac{mri} images.
+Furthermore, as mentioned in Sect.\,\ref{sec:introduction}, the \emph{a-priori} membership of a voxel to belong to a zone (i.e., \ac{pz} or \ac{cg}) has a high potential to increase the performance to assess the aggressiveness of prostate cancer.
 Therefore, the prostate zones need to be segmented instead of solely the prostate organ.
-In this regard, only the work of Litjens~\emph{et al.} have segmented the prostate zones using a probabilistic multi-atlas approach~\footcite{Litjens2014a}.
+In this regard, the work of Litjens~\emph{et al.} have segmented the prostate zones using a probabilistic multi-atlas approach~\footcite{Litjens2014a}.
 However, the segmentation was performed using only the \ac{t2w}-\ac{mri} modality and the \ac{adc} map.
-Although atlas-based methods are robust to intensity variations, they lack of accuracy in the boundary delineations~\footcite{Ghose2012}.
-The potential of machine learning methods to carry out such task is currently underestimated, but has been shown to be suitable in combination with the other approaches (i.e., deformable models or atlas-based)~\footcite{ghose2012graph}.
+Although atlas-based methods are robust to intensity variations, they lack accuracy in the boundary delineations~\footcite{Ghose2012}.
+The potential of machine learning methods to carry out such a task is currently underestimated, but has been shown to be suitable in combination with the other approaches (i.e., deformable models or atlas-based)~\footcite{ghose2012graph}.
 \textbf{Thus, we will design a hybrid system to segment the prostate zones, based on \ac{cnn} and \ac{asm} using all multi-parametric images.}
 The choice of \ac{cnn} is motivated by the recent breakthrough of deep-learning in multiple fields of computer vision.
-Deep-learning, however, has still not be extensively used in the field of medical imaging as attested by the organisation of the first workshop specifically dedicated to this topic at MICCAI 2015. 
-Deep-learning relies on a data-driven training stage in which large amount of data are required, which is a serious drawback in medical imaging.
-However, this problem is addressed by transfer learning which allow to use deep-learning to medical imaging.
+Deep-learning, however, has still not been extensively used in the field of medical imaging as attested by the organisation of the first workshop specifically dedicated to this topic at MICCAI 2015. 
+Deep-learning relies on a data-driven training stage in which large amounts of data are required, which is a serious drawback in medical imaging.
+However, this problem is addressed by transfer learning which allows deep-learning applied to medical imaging.
 
 \paragraph{Registration}
 
@@ -111,16 +111,16 @@ This method has initially been used for registration between \ac{t2w}-\ac{mri} a
 
 \paragraph{Detection and assessment}
 
-Up to now, \ac{cad} developed systems solely focus on the detection of prostate cancers, omitting a real assessment of the lesion aggressiveness.
+Up to now, \ac{cad} developed systems have solely focused on the detection of prostate cancers, omitting a real assessment of the lesion aggressiveness.
 The detection of cancers is commonly performed using machine leaning classifiers, designing frameworks as depicted in Fig.\,\ref{fig:wkfcad}.
 These frameworks rely on two compulsory stages and an intermediate optional one: (i) features detection, (ii) features selection/extraction and (iii) features classification.
-Lema\^itre~\emph{et al.} have extensively reviewed researches carried out in each of this stage for the development of \ac{cad} for prostate cancer~\footcite{Lemaitre2015}.
+Lema\^itre~\emph{et al.} have extensively reviewed research carried out in each of this stage for the development of \ac{cad} for prostate cancer~\footcite{Lemaitre2015}.
 These stages are organised in a sequential manner and thus stages upstream part of the features classification have a tremendous importance on the classification performance.
-Consequently, the use of discriminative features is certainly key and most probably the bottleneck of \ac{cad} systems, justifying the attention given by researchers to evaluate multitude of low- and high-level visual features, inspired by computer vision or biology.
-As aforementioned, deep-learning has been recently shown to be one of the most successful machine learning technique in broad types of classification tasks.
+Consequently, the use of discriminative features is certainly key and most probably the bottleneck of \ac{cad} systems, justifying the attention given by researchers to evaluate a multitude of low- and high-level visual features, inspired by computer vision or human perception.
+As aforementioned, deep-learning has been recently shown to be one of the most successful machine learning techniques in broad types of classification tasks.
 \ac{cnn} has the ability to generate automatically low- and high-level visual features in the network itself~\footcite{Zeiler2013} by only supplying the raw data as inputs.
 Furthermore, \ac{cnn} can be trained using the Gleason grade obtained through biopsy in order to get an assessment of the aggressiveness of the cancer.
-\textbf{Thus, we will detect and assess prostate cancers with \ac{cnn}. In addition, we will investigate the low- and high-level features to find potential new markers which can be used by clinicians or other machine learning methods.}
+\textbf{Thus, we will detect and assess prostate cancers with \ac{cnn} and validate the classifier using \ac{roc} analysis. In addition, we will investigate the low- and high-level features to find potential new markers which can be used by clinicians or other machine learning methods.}
 
 \paragraph{Evaluation using \acs*{pirads}}
 
@@ -146,18 +146,44 @@ Concerning the gender issues, it is worth to mention that there exists a perfect
 
 \subsubsection*{Qualifications and experience of the supervisor(s)}
 
+Prof. Meyer-Baese is an internationally and nationally recognized expert in her field and has won many scientific prizes and awards. Professor Meyer-Baese's core research is at the frontier of medical sciences and engineering. She has an outstanding publication record including 3 research monographs published by MIT Press and Elsevier, and more than 180 refereed journal and peer-reviewed conference papers in her field. She is also an outstanding citizen of the scientific community and very active in the organization of conferences and workshops as a Chair, serves on the Editorial Board of journals and as the Editor in Chief on many Special Issues in medical imaging. Prof. Meyer-Baese led over twenty funded research projects in her field with a total volume of six million dollars. Prof. Meyer-Baese worked interdisciplinary with the world- famous MD Anderson and Lee-Moffitt Cancer Center, and the National High Magnetic Field Laboratory in cancer research. Her research contributions demonstrate her capability to provide innovative concepts in the highly interdisciplinary area of biomedical engineering.
+
+Robert Mart\'i obtained his PhD in 2002 in mammographic image analysis from the University of East Anglia, UK. He is currently an assistant professor of ViCOROB. His main research interests are in the field of medical image analysis, specially focusing on feature extraction, pattern-recognition and image registration and its application to mammographic and prostate image analysis and \ac{cad} system. He has co-authored more than 70 international peer-reviewed papers including journals, conferences and book chapters. From 1999, he has participated as a researcher or principal investigator in various research projects funded by the Spanish and Catalan Governments and EPSRC (UK) with a total funding over 700.000 \euro{}. He is currently directing an EU FP7 project as a partner (ASSURE project, 355.290 \euro{} for \ac{udg}) and have also directed R\&D contracts with companies (over 50.000 \euro{}).
+Furthermore, he has been successively involved in the supervision of 8 PhD candidates in the last 5 years showing his ability for such involvement.
+He will be involved in the project supervising the research on medical imaging aspects with special emphasis on cancer lesion detection tasks and software development.
+He will establish during the whole project a strong collaboration with A. Meyer-Baese ensuring that research synergies between the host and beneficiary are properly carried out. 
+His expertise complements A. Meyer-Baese's and the fellow can profit from this constellation.
+
+% [CMB15] G. Lemaitre; R. Marti, J. Freixenet, JC. Vilanova, PM Walker, and F. Meriaudeau Computer-Aided Detection and Diagnosis for prostate cancer based on mono and multi-parametric MRI: A review. Computers in Biology and Medicine, to appear, 2015). [IF 1.475, Q2(41/85) B] 
+
+% [MIA13] S.Ghose, A.Oliver, J.Mitra, R.Martí, X.Lladó, J.Freixenet, D.Sidibé, J.C.Vilanova, J.Comet, and F.Meriaudeau. A supervised learning framework of statistical shape and probability priors for automatic prostate segmentation in ultrasound images. Medical Image Analyis, 7(6), pp 587-600, 2013. [IF 4.087, Q1(7/115) CSAI] 
+
+% [MIA 2012] J.Mitra, Z.Kato, R.Martí, A.Oliver, X.Lladó, D.Sidibé, S.Ghose, J.C.Vilanova, J.Comet, and F.Meriaudeau. A spline-based diffeomorphism for prostate multimodal registration. Medical Image Analyis, 16(6), pp 1259-1279. 2012. [ [IF 4.087, Q1(7/115) CSAI] 
+
+% [CMPB 2012] S.Ghose, A.Oliver, R.Martí, X.Lladó, J.C.Vilanova, J.Freixenet, J.Mitra, D.Sidibé, and F.Meriaudeau. A survey of prostate segmentation methodologies in ultrasound, magnetic resonance, and computed tomography images. Computer Methods and Programs in Biomedicine, 108(1), pp 262-287. 2012. [IF 1.555, Q1(21/100) CSTM]
+
+% [IJCARS 2012] S.Ghose, A.Oliver, R.Martí, X.Lladó, J.Freixenet, J.Mitra, J.C.Vilanova, J.Comet, and F.Meriaudeau. Statistical shape and texture model of quadrature phase information for prostate segmentation. International Journal of Computer Assisted Radiology and Surgery, 7(1), pp 43-55, 2012. [IF 1.364, Q3(76/120) RNMMI]
+
+% [IJCARS 2012] J.Mitra, R.Martí, A.Oliver, X.Lladó, S.Ghose, J.C.Vilanova, and F.Meriaudeau. Prostate multimodality image registration based on b-splines and quadrature local energy. International Journal of Computer Assisted Radiology and Surgery, 7(3), pp 445-454. 2012. [IF 1.364, Q3(76/120) RNMMI] 
+
+\subsubsection*{Hosting arrangements}
+
 Prof. A. Meyer-Baese and Prof. Dr. Robert Mart\'i have demonstrated their expertise in supervising researchers. They have also the endeavor, knowledge, experience and commitment to be able to offer the candidate appropriate support to continuously progress and to review his research plans, as well as providing the necessary feedback mechanisms. They will act as excellent mentors for this project.
 Guillaume Lema\^itre will establish a structured and regular communication with both scientists and all the members of theirs research groups and collaborators, to take full advantage of the arising research opportunities between the groups. Furthermore, he will keep records of all work progress and research findings, obtaining feedback by means of reports, monthly seminars, applying such feedback and working in accordance with agreed schedules, milestones, deliverables and research outputs which are described in Sect.\,\ref{sec:implementation}.
 In the outgoing phase, he will also have access to datasets from his home institution and computational/institutional resources, computer clusters for intensive computation provided by the host institution, and excellent facilities and experience in scientific studies aiming at the evaluation of \ac{cad} methods for prostate cancer. 
-For the re-integration of the researcher, the host will reincorporate the researcher into ViCOROB, where he has developed his main research activity. ViCOROB belongs to the \ac{udg} and is modern research centre speacialised in computer-vision and robotics
-
-For the re-integration of the researcher, the host will reincorporate the researcher into the CITIC, where he has developed his main research activity. The CITIC belongs to the  Campus of International Excellence in Biohealth, and is a modern research centre specialized in information and communication technologies, in which the University of Granada stands out as one of the 50 best Universities worldwide according to Shangai's index in computer science. The present project fits perfectly with the hosting priorities and guarantees a promising long term research career.
-(Please adapt for Girona)
-
-
-Qualifications and experience of the supervisor(s): Prof. Meyer-Baese is an internationally and nationally recognized expert in her field and has won many scientific prizes and awards. Professor Meyer-Baese’s core research is at the  frontier of medical sciences and engineering. She has an outstanding publication record including 3 research monographs published by MIT Press and Elsevier, and more than 180 refereed journal and peer-reviewed conference papers in her field. She is also an outstanding citizen of the scientific community and very active in the organization of conferences and workshops as a Chair, serves on the Editorial Board of journals and as the Editor in Chief on many Special Issues in medical imaging. Prof. Meyer-Baese led over twenty funded research projects in her field with a total volume of six million dollars. Prof. Meyer-Baese worked interdisciplinary with the world- famous MD Anderson and Lee-Moffitt Cancer Center, and the National High Magnetic Field Laboratory in cancer research. Her research contributions demonstrate her capability to provide innovative concepts in the highly interdisciplinary area of biomedical engineering.
-
-\paragraph{Career development}
+For the re-integration of the researcher, the host will reincorporate the researcher into ViCOROB, where he has developed his main research activity. 
+ViCOROB is part of the \emph{Technological Innovation Network Centre} (TECNIO) recognised by the Catalan Government which allows their researchers to advance their career in an entrepreneurial environment and to be more effective with their managerial skills.
+Indeed, they will gain new skills: (i) teamwork, (ii) personal development, (iii) project management, and (iv) entrepreneurship.
+Additionally, the R\&D Programs Unit at the Office of Research and Technology Transfer (OITT) at the \ac{udg} will offer support to the fellow for any aspects such as administrative, legal, financial, intellectual properties protection.
 
 \subsection{Capacity of the researcher to reach and re-enforce a position of professional maturity in research}
 \label{sec:maturity}
+
+Guillaume Lema\^itre has demonstrated to be a young and very talented researcher of a highly promising career in biomedical research. He demonstrated a highly independent research profile at the early PhD level stage. 
+He acquired a very in-depth knowledge in the new and challenging area of prostate cancer research and wrote the first state-of-the-art journal paper in \ac{cad} systems in multi-parametric \ac{mri}.
+He became aware of the lacking accurate diagnostic tools in the clinical practise and developed the desire to advance current \ac{cad} systems and especially develop in prostate cancer research a reliable diagnostic tool. 
+During his PhD, he has developed general pattern recognition and machine learning approaches which have been deployed to a large field of application in medical imaging: (i) detection of prostate cancer in multi-parametric \ac{mri}, (ii) detection of retinal diseases in OCT images, (iii) detection of melanoma in dermoscopic images, and (iv) breast cancer detection in \ac{mri} images and \ac{us} images. 
+Furthermore, he has gained knowledge in the business-related aspects of \ac{cad} system for prostate system and technology valorization, as shown by his recently published Master thesis.
+His knowledge about the scientific- and business-related aspects of prostate \ac{cad} system, together with the career development plan as part of the fellowship, will allow him to become an attractive candidate for fund and grant rising within his working institution.
+\textbf{The current proposal could lead to the development of the first commercial \ac{cad} system in Europe.}
+This excellent and unique opportunity will allow the fellow to re-enforce his entrepreneurial skill with the help of the technology transfer office of the \ac{udg}. 

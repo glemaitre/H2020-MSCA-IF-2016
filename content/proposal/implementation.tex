@@ -43,19 +43,19 @@ The proposal is split into 8 work packages (WPx) and subdivided into tasks (Tx):
   \item[] \textbf{T6.2} Develop the \ac{pirads}-based grading
   \item[] \textbf{T6.3} Validate this approach on our public dataset (1.3)
   \end{itemize}
-\item[] \textbf{WP7: Communication to general public (duration of 36 months)}
-  \begin{itemize}[noitemsep,nolistsep]
-  \item[] \textbf{T7.1} Internal seminars in FSU and UdG
-  \item[] \textbf{T7.2} Publish in general public press such as \emph{Engega} 
-  \item[] \textbf{T7.3} Scientific blog with periodic entries 
-  \item[] \textbf{T7.4} Enrollment to educational workshop such as \emph{Yong Research Campus} at UdG
-  \end{itemize}
-\item[] \textbf{WP8: Scientific dissemination (duration of 36 months)}
-  \begin{itemize}[noitemsep,nolistsep]
-  \item[] \textbf{T8.1} Maintenance of the web-platform by publishing code and results
-  \item[] \textbf{T8.2} Publish the works in peer-review journals
-  \item[] \textbf{T8.3} Publish the works in peer-review international conferences
-  \end{itemize}
+% \item[] \textbf{WP7: Communication to general public (duration of 36 months)}
+%   \begin{itemize}[noitemsep,nolistsep]
+%   \item[] \textbf{T7.1} Internal seminars in FSU and UdG
+%   \item[] \textbf{T7.2} Publish in general public press such as \emph{Engega} 
+%   \item[] \textbf{T7.3} Scientific blog with periodic entries 
+%   \item[] \textbf{T7.4} Enrollment to educational workshop such as \emph{Yong Research Campus} at UdG
+%   \end{itemize}
+% \item[] \textbf{WP8: Scientific dissemination (duration of 36 months)}
+%   \begin{itemize}[noitemsep,nolistsep]
+%   \item[] \textbf{T8.1} Maintenance of the web-platform by publishing code and results
+%   \item[] \textbf{T8.2} Publish the works in peer-review journals
+%   \item[] \textbf{T8.3} Publish the works in peer-review international conferences
+%   \end{itemize}
 \end{itemize}
 
 The following deliverables (Dx) will be released during the project:
@@ -86,17 +86,55 @@ To achieve the proposed goals, the following milestones (Mx) are defined:
 
 \subsection{Appropriateness of the management structure and procedures, including quality management and risk management}
 
-Develop your proposal according to the following lines:
-\begin{itemize}
-\item Project organisation and management structure, including the financial management strategy, as well as the progress monitoring mechanisms put in place;
-\item Risks that might endanger reaching project objectives and the contingency plans to be put in place should risk occur.
+This fellowship will provide the applicant with the generous and unique financial opportunity to accomplish the realization of the first prototype of \ac{cad} for prostate cancer detection.
+He is fully aware of the goal of this ambitious and interdisciplinary project.
+It is very important for him to determine more accurately whether or not the project is on schedule. 
+He will pay special attention to the most important conferences and special issues deadlines in the field (see Sect.\,\ref{sec:implementation} for further information). 
+They will be used as milestones to monitor progress and also as an opportunity to disseminate and share the results of the work with other cancer experts.
+A special budget will be allocated for them. 
+Increased  attention will also be paid to the submission of international journal papers in journals with a high reputation in the field.
+
+%\paragraph{Risk assessment and contingency plan} 
+The previous experience of the applicant in applying his developed machine learning approaches to research lines ranging from prostate, brain and skin cancer to retinal diseases, and the collective endeavor of all involved scientists and their research groups along with the intensive experience of the hosts institutions in managing projects, are indicative of the feasibility of this project. 
+Nevertheless, Guillaume Lema\^itre is well aware of the importance of developing a contingency plan to minimize the risks and present a mitigation strategy to surmount the possible issues:
+\begin{itemize}[noitemsep]
+\item \textbf{Risk 1(R1)} Potential problems: Insufficient number of cases. Probability: low. Alternative strategies:  Consult with major cancer centers in US and Spain. Contingency plan: Meeting and consulting with prostate cancer specialists at the Lee-Moffitt Center in Tampa, Florida.
+\item \textbf{Risk 2 (R2)} Potential problems: Insufficient pre-processing results. Probability: medium. Alternative strategies: Joint segmentation and registration implementation based on optical flow and active contour model. Contingency plan: Meeting and consulting with researcher and image registration expert Joachim Weickert, Saarland University (Germany).
+\item \textbf{Risk 3 (R3)} Potential problems: Non-representative feature extraction and poor classification results. Probability: Very low. Alternative strategies and contingency plan: apply dynamic texture techniques for spatio-temporal feature extraction and employ gray-level run-length matrix (GRRL) and gray level intensity size zone matrix (GLISZ). 
+This methodology has been a successful approach in different applications, and the applicant has the associated theoretical knowledge. 
+Consider selecting Random Forest Trees as alternative classifiers. Meeting and consulting with data mining expert, Claudia Plant, head of the scientific computing research group in the Helmholtz Zentrum in Munich.
+\item \textbf{Risk 4 (R4)} Description: Insufficient number of companies interested in the software. Probability: Low. Contingency plan: (i) Seek and arrange meetings with companies and the industry sector to show beta-version of the software at early stage. (ii) Schedule the meetings efficiently by not waiting until the last stage of the fellowship. (iii) Invite companies to monitor the development of the software. Thus, they could make recommendations in terms of interface and practical operation under an end user perspective. (iv) Request for support from OITT at the \ac{udg}, a service devoted to give advice on knowledge and technology transfer between university and industry.
 \end{itemize}
-The following could be also included in the Gantt Chart:
-\begin{itemize}
-\item Progress monitoring;
-\item Risk management;
-\item Intellectual Property Rights (IPR).
-\end{itemize}
+
+\subsection{Appropriateness of the institutional environment (infrastructure)}
+\label{sec:institution}
+
+\paragraph{Florida State University} 
+According to Shaingai's ARWUA, FSU is between the 200 best universities worldwide. 
+Its research infrastructure includes one of the largest high magnetic field laboratory worldwide, closely related to this project. 
+(1) Institutional resources: One 7T, two 3 T and two high-end 1.5 T MR scanners for image acquisition, (2) Clinical resources: Excellent facilities and experience in scientific studies aiming at the evaluation of \ac{cad} methods for MR mammography, counting on the collaboration of Prof. Adrian Barbu, a computer scientist with expertise in \ac{cad} design. 
+This aspect can be essential for documenting the real-world impact of research progress in the project w.r.t. practical health care. 
+(3) Workstation facilities: office space equipped with a desktop computer and network connections. 
+In addition, designated visitor offices are available. 
+The DSC also manages approximately 30 servers for core network services using primarily generic Intel-compatible servers running CENTOS. 
+Special staff support is offered for publications and graphics.
+
+\paragraph{ViCOROB}
+ViCOROB is a research institute specialized in computer vision and robotics at \ac{udg}.
+The laboratories of ViCOROB are well-equipped with computers, servers, and specific software required for processing clinically data acquired. 
+The Image Analysis Lab has recently been equipped with 2 high-performance servers (featuring 4 quad-core processors and 128 GB of RAM), a Totoku MS31i2 Diagnostic Displays system, and access to the use of CESCA facilities (the Supercomputing research center in Barcelona) which offers supercomputing shared-memory and distributed-memory machines suitable when dealing with such huge amount of data.
+Furthermore, the fellow will have access to a wide range of scientific journals and books via institution authentification.
+
+\subsection{Competences, experience and complementary of the participating organisations and institutional commitment}
+\label{sec:competences}
+
+USA has been the number one research destination for young Europeans under every single international funding instrument. 
+This reflects upon the unlimited opportunities as well as the accumulated research experience and competence.
+As it is stated in the institutional web, there is probably no other large public university with a stronger culture of commitment to student success than \ac{fsu}.
+\ac{fsu} will provide the institutional, computational, high-quality research and human resources necessary to accomplish the objectives of this project.
+\ac{udg} has a successful tradition in acquiring funding from the European Commission with approx. 18000000€ (?) funding, including 31 Marie-Curie projects, where 8 are Marie-Curie fellowships.
+The institutional embedding in the ViCOROB, the return phase allocation for the researcher, will encourage the potentialities of the proposed aims within this project, with a constant flow of international researchers, seminars and workshops, and a modern and competitive environment including last technologies for communications or cluster computer's room available to the applicant.
+Strengthening the links of both institutions in terms of application and training in research methods and cutting-edge technologies serves as bridge to connect and enrich them in terms of knowledge and culture and open new doors for international exchange programs and lasting collaborations.
 
 \newpage
 
@@ -138,15 +176,18 @@ The following could be also included in the Gantt Chart:
         \ganttbar[bar/.append style={fill=Green!70}]{T1.2}{1}{4}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T1.3}{5}{5}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T1.4}{5}{10}\\
+        \ganttbar[bar/.append style={fill=Red!70}]{R1}{5}{5}\\
         \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP2}{6}{12}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T2.1}{6}{7}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T2.2}{8}{9}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T2.3}{10}{11}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T2.4}{12}{12}\\
+        \ganttbar[bar/.append style={fill=Red!70}]{R2}{12}{12}\\
         \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP3}{13}{19}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T3.1}{13}{14}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T3.2}{16}{17}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T3.3}{18}{19}\\
+        \ganttbar[bar/.append style={fill=Red!70}]{R3}{19}{19}\\
         \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP4}{20}{26}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T4.1}{20}{21}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T4.2}{22}{24}\\
@@ -155,18 +196,19 @@ The following could be also included in the Gantt Chart:
         \ganttbar[bar/.append style={fill=Green!70}]{T5.1}{27}{28}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T5.2}{29}{32}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T5.3}{33}{34}\\
+        \ganttbar[bar/.append style={fill=Red!70}]{R4}{34}{34}\\
         \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP6}{35}{36}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T6.1}{35}{35}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T6.2}{35}{35}\\
         \ganttbar[bar/.append style={fill=Green!70}]{T6.3}{36}{36}\\
-        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP7}{1}{36}\\
-        \ganttbar[bar/.append style={fill=Green!70}]{T7.1}{1}{36}\\
-        \ganttbar[bar/.append style={fill=Green!70}]{T7.2}{6}{6}
-        \ganttbar[bar/.append style={fill=Green!70}]{}{12}{12}
-        \ganttbar[bar/.append style={fill=Green!70}]{}{18}{18}\\
-        \ganttbar[bar/.append style={fill=Green!70}]{T7.3}{1}{36}\\
-        \ganttbar[bar/.append style={fill=Green!70}]{T1.4}{5}{10}\\
-        \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP8}{1}{36}\\
+        % \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP7}{1}{36}\\
+        % \ganttbar[bar/.append style={fill=Green!70}]{T7.1}{1}{36}\\
+        % \ganttbar[bar/.append style={fill=Green!70}]{T7.2}{6}{6}
+        % \ganttbar[bar/.append style={fill=Green!70}]{}{12}{12}
+        % \ganttbar[bar/.append style={fill=Green!70}]{}{18}{18}\\
+        % \ganttbar[bar/.append style={fill=Green!70}]{T7.3}{1}{36}\\
+        % \ganttbar[bar/.append style={fill=Green!70}]{T1.4}{5}{10}\\
+        % \ganttgroup[group/.append style={fill=Goldenrod!100}]{WP8}{1}{36}\\
         \ganttdeliv[inline]{D1.1}{5}{5}
         \ganttdeliv[inline]{D2.1}{12}{12}
         \ganttdeliv[inline]{D3.1}{19}{19}
@@ -183,6 +225,12 @@ The following could be also included in the Gantt Chart:
         \ganttmile[inline]{M4.1}{28}{28}
         \ganttmile[inline]{M5.1}{34}{34}
         \ganttmile[inline]{M6.1}{36}{36} \\
+        \ganttcomm[inline]{C2}{5}{5}
+        \ganttcomm[inline]{C1}{12}{12}
+        \ganttcomm[inline]{C1}{19}{19}
+        \ganttcomm[inline]{C1}{26}{26}
+        \ganttcomm[inline]{C1}{34}{34}
+        \ganttcomm[inline]{C3}{36}{36}
         % \ganttgroup[group/.append style={fill=yellow!70}]{WP1}{1}{5} \\
         % \ganttbar[bar/.append style={fill=OliveGreen!50}]{D1.1}{5}{5} \\
         % \ganttmilestone{M1.1}{10} \\
@@ -214,24 +262,4 @@ The following could be also included in the Gantt Chart:
   \end{figure}
 
 \end{landscape}
-
 \newpage
-
-\subsection{Appropriateness of the institutional environment (infrastructure)}
-\label{sec:institution}
-
-Give a description of the legal entity/ies and its main tasks (per participant).
-Explain why the fellowship has the maximum chance of a successful outcome.
-
-NB: Each participant is described in Section 6. This specific information should not be repeated here.
-
-\subsection{Competences, experience and complementarity of the participating organisations and institutional commitment}
-\label{sec:competences}
-
-Here describe how the fellowship will be beneficial for both the Experienced Researcher and host organisation(s).
-\begin{itemize}
-\item Commitment of beneficiary and partner organisations to the programme (for partner organisations, please see also section 6)
-\end{itemize}
-
-\paragraph{Partner organisations:}
-The role of Partner organisations in MS/AC for secondments and their active contribution to the research and training activities should be described.

@@ -2,6 +2,7 @@
 
 \usepackage{pdflscape}
 \usepackage{enumitem}
+\usepackage[gen]{eurosym}
 
 %% Latex documents that need direct input
 \input{latex/filesystem/package.tex}        % contains the latex packages
@@ -52,6 +53,24 @@ mile label font=\tiny\color{black},
 mile left shift=0pt,
 mile right shift=0pt,
 mile height=.9
+}
+
+\newganttchartelement*{comm}{
+comm/.style={
+  shape=rectangle,
+  inner sep=0pt,
+  draw=Violet!30,
+  fill=Violet!30
+  },
+comm incomplete/.style={
+  /pgfgantt/comm,
+  draw=Violet,
+  bottom color=Violet!50
+  },
+comm label font=\tiny\color{black},
+comm left shift=0pt,
+comm right shift=0pt,
+comm height=.9
 }
 
 \begin{document}
