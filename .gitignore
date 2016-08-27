@@ -113,3 +113,7 @@ sympy-plots-for-*.tex/
 
 # xindy
 *.xdy
+
+*~
+*auto/
+*.spl

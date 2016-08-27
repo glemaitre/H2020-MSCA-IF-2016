@@ -11,9 +11,9 @@ In Europe, prostate cancer is reported to be the most frequently diagnosed cance
 Currently, addressing this issue is a major public debate, where the implementation of appropriate screening methods and subsequent treatments is key.
 In this regard, the \ac{erspc} is conducted to investigate the potential benefits of a population-based screening~\footcite{Schroder2015}. 
 The screening consists of a \ac{psa} test and depending of the \ac{psa} level measured, an additional ``blind'' biopsy is carried out. 
-Despite that mortality significantly has been decreasing, the employed screening strategy suffers of a high rate of over-diagnosis and over-treatment~\footcite{Delpierre2013}, due to the fact that prostate cancers grow either slowly or fast.
-The slow-growing tumours account for up to~85~\% of all cancers and stay confined to the prostate gland, while the fast-growing tumours rapidly develop and metastasise to other organs, significantly affecting the morbidity and mortality rate.
-Furthermore, prostate cancer is more likely to develop in specific regions of the prostate: around~70-80~\% of prostate cancers originate in the \ac{pz}, whereas~10-20~\% in the \ac{cg}, but are more aggressive and more likely to invade other organs. 
+Despite that mortality significantly has been decreasing, the employed screening strategy suffers of a high rate of over-diagnosis and over-treatment~\footcite{Delpierre2013}, and misses the more aggressive cancers in the \ac{cg}%, due to the fact that prostate cancers grow either slowly or fast.
+%The slow-growing tumours account for up to~85~\% of all cancers and stay confined to the prostate gland, while the fast-growing tumours rapidly develop and metastasise to other organs, significantly affecting the morbidity and mortality rate.
+%Furthermore, prostate cancer is more likely to develop in specific regions of the prostate: around~70-80~\% of prostate cancers originate in the \ac{pz}, whereas~10-20~\% in the \ac{cg}, but are more aggressive and more likely to invade other organs. 
 \textbf{Thus, additionally to cancer detection, the screening methods need to estimate the cancer aggressiveness to allow clinicians to act accordingly.}
 
 In addition, the investigators of the \ac{erspc} have concluded that the use of \emph{``multi-parametric \ac{mri} and the development of new markers are the hope for the future''}.
@@ -29,9 +29,9 @@ This latter, however, has been shown to be extremely helpful to grade cancer agg
 \input{./content/proposal/figures/cad}
 
 Therefore, the aim of this project is to design a \ac{cad} system able to both detect and assess prostate cancers using all currently available multi-parametric \ac{mri} modalities.
-To achieve this goal, we will revisit the different stages of the \ac{cad} framework.
-First, we will insure to work with the most consistent data, enhancing them using different types of pre-processing.
-Subsequently, we will segment the prostate zones using multi-parametric \ac{mri} images 
+%To achieve this goal, we will revisit the different stages of the \ac{cad} framework.
+%First, we will insure to work with the most consistent data, enhancing them using different types of pre-processing.
+%Subsequently, we will segment the prostate zones using multi-parametric \ac{mri} images 
 
 % {\color{red} drastically improve here
 % The architecture of our \ac{cad} system will imply the following investigations: 
@@ -44,7 +44,7 @@ Subsequently, we will segment the prostate zones using multi-parametric \ac{mri}
 % \item Grading using standard PI-RADS
 % \end{enumerate}
 % }
-These methodologies will be extensively presented and argued in Sect.\,\ref{sec:methodologies}.
+%These methodologies will be extensively presented and argued in Sect.\,\ref{sec:methodologies}.
 
 \subsubsection{Research methodologies}
 \label{sec:methodologies}
@@ -76,11 +76,11 @@ Similarly to bias correction, only two \ac{cad} systems have filtered the images
 Non-Local Means-based denoising techniques have extensively and successively been used for other \ac{mri} applications, but never for \ac{mri} prostate images~\footcite{Manjon2008}.
 \textbf{Thus, we will evaluate the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique to select the appropriate method for our application.}
 
-\ac{cad} systems are based on machine learning classifiers which are trained to differentiate cancerous from healthy tissue.
-The classification performance of these classifiers highly relies on the consistency of the dataset.
-Subsequently, one can emphasize the desire to reduce the inter-patient variability of the \ac{mri} dataset.
-In this regard, each patient dataset needs to be standardised/normalised to a common basis, modality by modality.
-Only two methods have been used in \ac{cad} for prostate: the first method consists in normalising the images via the $z$-score, while the second technique is based on a linear normalisation by parts~\footcite{Madabhushi2006a}.
+%\ac{cad} systems are based on machine learning classifiers which are trained to differentiate cancerous from healthy tissue.
+%The classification performance of these classifiers highly relies on the consistency of the dataset.
+%Subsequently, one can emphasize the desire to reduce the inter-patient variability of the \ac{mri} dataset.
+%In this regard, each patient dataset needs to be standardised/normalised to a common basis, modality by modality.
+Only two methods have been used in \ac{cad} for prostate to reduce the inter-patient variability in the \ac{mri} dataset: the first method consists in normalising the images via the $z$-score, while the second technique is based on a linear normalisation by parts~\footcite{Madabhushi2006a}.
 Lema\^itre~\emph{et al.} have developed a normalisation technique using the Rician properties of the \ac{mri} signal~\footnote{This work is submitted for publication.}, which outperforms the previous methods for \ac{t2w}-\ac{mri} images.
 \textbf{Thus, we will extend this work to the other \ac{dce}-\ac{mri} and \ac{dw}-\ac{mri} modalities}.
 
@@ -93,31 +93,30 @@ This set of enhancement techniques has already been investigated by Lema\^itre~\
 To achieve robust cancer detection, the classification has to be carried out only in the prostate area, motivating the need to perform a segmentation of the organ in the \ac{mri} images.
 Furthermore, as mentioned in Sect.\,\ref{sec:introduction}, the \emph{a-priori} membership of a voxel to belong to a zone (i.e., \ac{pz} or \ac{cg}) has a high potential to increase the performance to assess the aggressiveness of prostate cancer.
 Therefore, the prostate zones need to be segmented instead of solely the prostate organ.
-In this regard, the work of Litjens~\emph{et al.} have segmented the prostate zones using a probabilistic multi-atlas approach~\footcite{Litjens2014a}.
-However, the segmentation was performed using only the \ac{t2w}-\ac{mri} modality and the \ac{adc} map.
-Although atlas-based methods are robust to intensity variations, they lack accuracy in the boundary delineations~\footcite{Ghose2012}.
-The potential of machine learning methods to carry out such a task is currently underestimated, but has been shown to be suitable in combination with the other approaches (i.e., deformable models or atlas-based)~\footcite{ghose2012graph}.
+%In this regard, the work of Litjens~\emph{et al.} have segmented the prostate zones using a probabilistic multi-atlas approach~\footcite{Litjens2014a}.
+%However, the segmentation was performed using only the \ac{t2w}-\ac{mri} modality and the \ac{adc} map.
+%Although atlas-based methods are robust to intensity variations, they lack accuracy in the boundary delineations~\footcite{Ghose2012}.
+%The potential of machine learning methods to carry out such a task is currently underestimated, but has been shown to be suitable in combination with the other approaches (i.e., deformable models or atlas-based)~\footcite{ghose2012graph}.
 \textbf{Thus, we will design a hybrid system to segment the prostate zones, based on \ac{cnn} and \ac{asm} using all multi-parametric images.}
 The choice of \ac{cnn} is motivated by the recent breakthrough of deep-learning in multiple fields of computer vision.
 Deep-learning, however, has still not been extensively used in the field of medical imaging as attested by the organisation of the first workshop specifically dedicated to this topic at MICCAI 2015. 
-Deep-learning relies on a data-driven training stage in which large amounts of data are required, which is a serious drawback in medical imaging.
-However, this problem is addressed by transfer learning which allows deep-learning applied to medical imaging.
+%Deep-learning relies on a data-driven training stage in which large amounts of data are required, which is a serious drawback in medical imaging.
+%However, this problem is addressed by transfer learning which allows deep-learning applied to medical imaging.
 
 \paragraph{Registration}
 
 In multi-parametric \ac{mri}, the data are collected in a sequential manner, involving a possible misalignment between the different modalities.
-During her PhD at the Universitat de Girona, Mitra~\emph{et al.} developed an automatic multi-modal non-rigid registration method~\footcite{Mitra2012a}, which has been shown to outperform the state-of-the-art methods.
+Mitra~\emph{et al.} developed an automatic multi-modal non-rigid registration method~\footcite{Mitra2012a}, which has been shown to outperform the state-of-the-art methods.
 This method has initially been used for registration between \ac{t2w}-\ac{mri} and \ac{us} prostate images; \textbf{therefore, we will extend this method to align our multi-parametric \ac{mri} dataset.}
 
 \paragraph{Detection and assessment}
 
 Up to now, \ac{cad} developed systems have solely focused on the detection of prostate cancers, omitting a real assessment of the lesion aggressiveness.
-The detection of cancers is commonly performed using machine leaning classifiers, designing frameworks as depicted in Fig.\,\ref{fig:wkfcad}.
-These frameworks rely on two compulsory stages and an intermediate optional one: (i) features detection, (ii) features selection/extraction and (iii) features classification.
+The detection of cancers is commonly performed using machine leaning classifiers, designing frameworks relying on two compulsory stages and an intermediate optional one: (i) features detection, (ii) features selection/extraction and (iii) features classification.
 Lema\^itre~\emph{et al.} have extensively reviewed research carried out in each of this stage for the development of \ac{cad} for prostate cancer~\footcite{Lemaitre2015}.
-These stages are organised in a sequential manner and thus stages upstream part of the features classification have a tremendous importance on the classification performance.
+%These stages are organised in a sequential manner and thus stages upstream part of the features classification have a tremendous importance on the classification performance.
 Consequently, the use of discriminative features is certainly key and most probably the bottleneck of \ac{cad} systems, justifying the attention given by researchers to evaluate a multitude of low- and high-level visual features, inspired by computer vision or human perception.
-As aforementioned, deep-learning has been recently shown to be one of the most successful machine learning techniques in broad types of classification tasks.
+Deep-learning has been recently shown to be one of the most successful machine learning techniques in broad types of classification tasks.
 \ac{cnn} has the ability to generate automatically low- and high-level visual features in the network itself~\footcite{Zeiler2013} by only supplying the raw data as inputs.
 Furthermore, \ac{cnn} can be trained using the Gleason grade obtained through biopsy in order to get an assessment of the aggressiveness of the cancer.
 \textbf{Thus, we will detect and assess prostate cancers with \ac{cnn} and validate the classifier using \ac{roc} analysis. In addition, we will investigate the low- and high-level features to find potential new markers which can be used by clinicians or other machine learning methods.}
