@@ -69,14 +69,14 @@ In this regard, particular attention to correct each of these drawbacks will be 
 
 \Ac{mri} images are affected by the inhomogeneity of the \ac{mri} field called bias field, resulting in a smooth variation of the intensities across each image.
 Although bias correction methods are commonly used to enhance brain \ac{mri} images~\footcite{Vovk2007}, only one \ac{cad} system for prostate has reported to use such pre-processing~\footcite{Viswanath2009}.
-The same authors have empirically evaluated the state-of-the-art methods~\footcite{viswanath2011empirical} concluding that N3 algorithm~\footcite{Sled1998} yields to better classification performance than other methods~\footcite{Styner2000}\textsuperscript{,}\footcite{Cohen2000}.
-Recently, Lin~\emph{et al.}~\footcite{Lin2011} have proposed a method combining the N3 algorithm with the Fuzzy C-Means algorithm~\footcite{Ahmed2002} which outperforms the original methods, in terms of breast segmentation.
+The same authors have empirically evaluated the state-of-the-art methods~\footcite{viswanath2011empirical} concluding that N3 algorithm~\footcite{Sled1998} yields to better classification performance than other methods.
+Recently, Lin~\emph{et al.}~\footcite{Lin2011} have proposed a method combining the N3 algorithm with the Fuzzy C-Means algorithm which outperforms the original methods, in terms of breast segmentation.
 \textbf{Therefore, we will compare these state-of-the-art methods, by ensuring the benefit of the method of Lin~\emph{et al.} for our specific application.}
 
 Apart from the bias field, \Ac{mri} images are also degraded by a Rician noise. 
 Similarly to bias correction, only two \ac{cad} systems have filtered the images using wavelet-based techniques~\footcite{Mallat2008}\textsuperscript{,}\footcite{Pizurica2003}, which offer a proper theoretical baseline for Rician corruption~\footcite{Nowak1999}.
-Non-Local Means-based denoising techniques have extensively and successively been used for other \ac{mri} applications, but never for \ac{mri} prostate images~\footcite{Manjon2008}.
-\textbf{Thus, we will evaluate the Non-Local Means-based techniques~\footcite{Manjon2012}\textsuperscript{,}\footcite{Coupe2011} and wavelet-based technique to select the appropriate method for our application.}
+Non-Local Means-based denoising techniques have extensively and successively been used for other \ac{mri} applications, but never for \ac{mri} prostate images.
+\textbf{Thus, we will evaluate the Non-Local Means-based techniques~\footcite{Manjon2012} and wavelet-based technique to select the appropriate method for our application.}
 
 %\ac{cad} systems are based on machine learning classifiers which are trained to differentiate cancerous from healthy tissue.
 %The classification performance of these classifiers highly relies on the consistency of the dataset.
@@ -149,48 +149,75 @@ ProDeepCAD will serve as a blueprint for screening and diagnosis of other cancer
 The main objective of the present project is to establish a mutually beneficial partnership between the host institute, the \ac{fsu}, the fellow and the beneficiary, the \ac{udg}, with the goal to develop the first multi-parametric \ac{cad} system for prostate cancer detection and diagnosis.
 The proposed research will allow the fellow to continue gaining experience in his former research line, the design of multi-parametric \ac{cad} systems portable to many other cancers such as breast and brain.
 The fellow will gain expertise in developing intelligent \ac{cad} systems, novel pre-processing techniques to be applied to prostate images and integrated in the \ac{cad} system, and in cancer research in general.
-In addition he will acquire knowledge in the molecular basics of cancer.
-With the acquired skills he will continue the development of this very comprehensive \ac{cad} system for prostate cancer that will be the first prototype on the European market.
+
+At the start of his training in \ac{fsu}, G. Lema\^itre will be required to attend an orientation session hosted by the \ac{opa}, which will provide information on postdoctoral policies, campus resources (e.g., libraries, computing facilities, grants office), and coursework, teaching, and funding opportunities.
+\ac{fsu} currently offers a postdoctoral seminar series at which postdocs can present and receive feedback on their research, as well as courses in pedagogy, grants management, organizational behavior, and the structure of colleges and universities.
+\ac{fsu} also has several certificate programs aimed at providing additional training to postdocs.
+For example, the Postdoctoral Certificate Program in Research offers coursework in research ethics, mentoring, and becoming an independent investigator, as well as traditional journal club and research training experiences.
+\ac{fsu} has biannual an Industry Day where medical companies present their research and PhD students and postdocs as well and new research lines can be exchanged and established.
+The host's department has two visiting professors in radiology specialized in prostate research who have strong connections to General Electric, Philips, and Siemens, which will help the fellow in the development of adequate \ac{cad} solution for clinicians.
+The close proximity of the Lee-Moffitt-Cancer Center, the biggest in the Southeast of US, and the strong ties to MD Anderson ensure an additional link to the cutting edge clinical research in prostate cancer.
+\ac{opa} also regularly hosts career development seminars, to which the fellow will participate, on topics such as grant writing, lab management, research ethics, networking and interviewing, and teaching, and it has staff experienced at providing career advising suited to biomedical science researchers.
+
+In both \ac{fsu} and \ac{udg}, G. Lemai\^itre will be participate actively in weekly group meetings discussing current literature, grant applications, manuscripts, and programming/algorithmic problems.
+Additionally, G. Lema\^itre will mentor PhD students together with Prof. A. Meyer-Baese and Dr. R. Mart\'i.
+Furthermore, they will transfer to the fellow additional skills which they gain during there research years such as: algorithm implementation; mathematical modelling; ability to attract funding; expertise as editor of books and journal special issues; and student tutoring, curriculum development, and doctoral committee chair.
+Prof. A. Meyer-Baese will also share her expertise in clinical domain: patient management; understanding cutting-edge medical methods and techniques; collaborating with physicians; radiological sources and MR images management; database management, storage and processing.
+
+In the outgoing phase, it should be emphasize that the young and active research group computer vision and robotic (ViCOROB), to which the host institution in Europe belongs, will definitely benefit from this project in the incoming phase, capitalising on the works carried out for the last decade in the area of prostate cancer. The fellow will play an indispensable role in the group by: training new researchers, superivising PhD candidates and MSc students, attracting interest for funding, applying for new grants/projects,  establishing collaborations with other groups, contacting industry related agents, strengthen hospitals and health services relations, participating in seminars, publishing papers, and attending to conferences.
+
+Finally, G. Lema\^itre is the perfect candidate for the propose challenge related to the transfer of knowledge between two international institutions as \ac{udg} and \ac{fsu}: although G. lema\^itre is a junior scientist, he faced up to a similar problematic during his joint PhD between the \ac{udg} and the \ac{ub}, to which he successfully met as his research records show.
+Furthermore, he already proved is competence to perform delocalized research has shown by his enrolment in the open-source software community, by collaborating with researchers from different institutions\footnote{\texttt{https://github.com/scikit-learn-contrib/imbalanced-learn}}.
+Additionally to the knowledge gain during his PhD, he will be able to apply his knowledge in technology transfer in medical care acquired during MSc in Business Innovation and Technology Management.
+
+Concerning the gender issues, it is worth to mention that there exists a perfect balance between the supervisor's gender of this project and him.
+
+
+
+% In addition he will acquire knowledge in the molecular basics of cancer.
+% With the acquired skills he will continue the development of this very comprehensive \ac{cad} system for prostate cancer that will be the first prototype on the European market.
 %Prof. Meyer-Baese has developed an intense and prolific research activity in breast cancer diagnosis through the last decades.
 %She wrote the first research monograph in ``Pattern recognition in Medical Imaging'' (Elsevier) and ``Biomedical Signal Processing: Contemporary Methods and Applications'' (MIT Press).
 %She has an extensive experience in research and training in this field making her the most appropriate person to supervise this research given also her extensive experience in post-graduate and graduate educations.
 %In addition to the pure scientific knowledge transfer included in the aims of this project, her expertise in the field also include success in coordinating research projects that involve multidisciplinary agents.
 %Specifically, she is trained in the following skills: patient management; understanding cutting-edge medical methods and techniques; collaborating with physicians; algorithm implementation; mathematical modelling; radiological sources and MR images management; database management, storage and processing; ability to attract funding; expertise as editor of books and journal special issues; and student tutoring, curriculum development, and doctoral committee chair.
-Under the supervision of Prof. A. Meyer-Baese, the accomplishment of the aims of this project will serve as bridge to transfer the aforementioned skills under the supervision of Prof. A. Meyer-Baese.
-The accomplishment of the aims of this project will serve as bridge to transfer the skills as: patient management; understanding cutting-edge medical methods and techniques; collaborating with physicians; algorithm implementation; mathematical modelling; radiological sources and MR images management; database management, storage and processing; ability to attract funding; expertise as editor of books and journal special issues; and student tutoring, curriculum development, and doctoral committee chair.
+% Under the supervision of Prof. A. Meyer-Baese, the accomplishment of the aims of this project will serve as bridge to transfer the aforementioned skills under the supervision of Prof. A. Meyer-Baese.
+% The accomplishment of the aims of this project will serve as bridge to transfer the skills as: patient management; understanding cutting-edge medical methods and techniques; collaborating with physicians; algorithm implementation; mathematical modelling; radiological sources and MR images management; database management, storage and processing; ability to attract funding; expertise as editor of books and journal special issues; and student tutoring, curriculum development, and doctoral committee chair.
 
-Also, the host institution in USA will benefit from the previous knowledge of the applicant in biomedical image processing in prostate cancer research, as the aims of this project converge into global policies of USA and also research objectives of the host team, creating synergies and guarantees of lasting collaborations.
-The applicant brings in an enormous expertise in prostate cancer research that will flow into the group of Prof. Meyer-Baese and will enhance the current cancer research work.
-It is also important to stress that a native English spoken host will serve to significantly improve the language skills of the researcher, which are of fundamental importance in communication of research results: writing papers, oral presentations in workshops/conferences and discussions between researchers.
+% Also, the host institution in USA will benefit from the previous knowledge of the applicant in biomedical image processing in prostate cancer research, as the aims of this project converge into global policies of USA and also research objectives of the host team, creating synergies and guarantees of lasting collaborations.
+% The applicant brings in an enormous expertise in prostate cancer research that will flow into the group of Prof. Meyer-Baese and will enhance the current cancer research work.
+% It is also important to stress that a native English spoken host will serve to significantly improve the language skills of the researcher, which are of fundamental importance in communication of research results: writing papers, oral presentations in workshops/conferences and discussions between researchers.
+  
+% In addition, \ac{fsu} has demonstrated a strong commitment to creating a high quality research training environment. 
 
-At the start of his training, the researcher will be required to attend an orientation session hosted by the Office of Postdoctoral Affairs, which will provide information on postdoctoral policies, campus resources (e.g., libraries, computing facilities, grants office), and coursework, teaching, and funding opportunities.
-The Office of Postdoctoral Affairs also regularly hosts career development seminars on topics such as grant writing, lab management, research ethics, networking and interviewing, and teaching, and it has staff experienced at providing career advising suited to biomedical science PhDs.  
-In addition, \ac{fsu} has demonstrated a strong commitment to creating a high quality research training environment. 
-\ac{fsu} currently offer a postdoctoral seminar series at which postdocs can present and receive feedback on their research, as well as courses in pedagogy, grants management, organizational behavior, and the structure of colleges and universities.
-\ac{fsu} also have several certificate programs aimed at providing additional training to postdocs.
-For example, our Postdoctoral Certificate Program in Research offers coursework in research ethics, mentoring, and becoming an independent investigator, as well as traditional journal club and research training experiences.
-To foster open and clear communication with the researcher, the host will provide him with the Association of American Medical Colleges Compact Between Postdoctoral Appointees and Their Mentors, which describes the commitments both they and I are expected to make in order to ensure an effective postdoctoral training experience.
-An individual development plan will be carved in order to identify and work toward his short- and long-term career goals.  
-Because effective communication of research findings is an essential component of scientific success, the  will help to hone his communication skills by writing research articles and developing oral and poster presentations for lab meetings, department seminars, and scientific meetings.
-The host will also help  to prepare his own research grants and involve them in the development of his. 
+% To foster open and clear communication with the researcher, the host will provide him with the Association of American Medical Colleges Compact Between Postdoctoral Appointees and Their Mentors, which describes the commitments both they and I are expected to make in order to ensure an effective postdoctoral training experience.
+% An individual development plan will be carved in order to identify and work toward his short- and long-term career goals.  
+% Because effective communication of research findings is an essential component of scientific success, the  will help to hone his communication skills by writing research articles and developing oral and poster presentations for lab meetings, department seminars, and scientific meetings.
+ 
 
-\ac{fsu} has biannual an Industry Day where medical companies present their research and PhD students and postdocs as well and new research lines can be exchanged and established.
-The host's Department has two Visiting Professors in Radiology specialized in prostate research who have strong connections to GE, Philipps and Siemens.
-The close proximity of the Lee-Moffitt-Cancer Center, the biggest in the Southeast of US, and the strong ties to MD Anderson ensure an additional link to the cutting edge clinical research in prostate cancer.
 
-The young and active research group computer vision and robotic (ViCOROB), to which the host institution in Europe belongs, will definitely benefit from this project in the incoming phase, capitalising on the works carried out for the last decade in the area of prostate cancer. The fellow will play an indispensable role in the group by: training new researchers, superivising PhD candidates and MSc students, attracting interest for funding, applying for new grants/projects,  establishing collaborations with other groups, contacting industry related agents, strengthen hospitals and health services relations, participating in seminars, publishing papers, and attending to conferences.
-
-Concerning the gender issues, it is worth to mention that there exists a perfect balance between the supervisor's gender of this project and him.
 
 \subsection{Quality of the supervision and the integration in the team/institution}
 \label{sec:supervision}
 
 \subsubsection*{Qualifications and experience of the supervisor(s)}
 
-Prof. Meyer-Baese is an internationally and nationally recognized expert in her field and has won many scientific prizes and awards. Professor Meyer-Baese's core research is at the frontier of medical sciences and engineering. She has an outstanding publication record including 3 research monographs published by MIT Press and Elsevier, and more than 180 refereed journal and peer-reviewed conference papers in her field. She is also an outstanding citizen of the scientific community and very active in the organization of conferences and workshops as a Chair, serves on the Editorial Board of journals and as the Editor in Chief on many Special Issues in medical imaging. Prof. Meyer-Baese led over twenty funded research projects in her field with a total volume of six million dollars. Prof. Meyer-Baese worked interdisciplinary with the world- famous MD Anderson and Lee-Moffitt Cancer Center, and the National High Magnetic Field Laboratory in cancer research. Her research contributions demonstrate her capability to provide innovative concepts in the highly interdisciplinary area of biomedical engineering.
+Prof. Meyer-Baese is an internationally and nationally recognized expert in her field and has won many scientific prizes and awards.
+Prof. Meyer-Baese's core research is at the frontier of medical sciences and engineering.
+She has an outstanding publication record including 3 research monographs published by MIT Press and Elsevier, and more than 180 refereed journal and peer-reviewed conference papers in her field.
+She is also an outstanding citizen of the scientific community and very active in the organization of conferences and workshops as a Chair, serves on the Editorial Board of journals and as the Editor in Chief on many Special Issues in medical imaging.
+Prof. Meyer-Baese led over twenty funded research projects in her field with a total volume of six million dollars.
+Prof. Meyer-Baese worked interdisciplinary with the world- famous MD Anderson and Lee-Moffitt Cancer Center, and the National High Magnetic Field Laboratory in cancer research.
+Her research contributions demonstrate her capability to provide innovative concepts in the highly interdisciplinary area of biomedical engineering.
 
-Robert Mart\'i obtained his PhD in 2002 in mammographic image analysis from the University of East Anglia, UK. He is currently an assistant professor of ViCOROB. His main research interests are in the field of medical image analysis, specially focusing on feature extraction, pattern-recognition and image registration and its application to mammographic and prostate image analysis and \ac{cad} system. He has co-authored more than 70 international peer-reviewed papers including journals, conferences and book chapters. From 1999, he has participated as a researcher or principal investigator in various research projects funded by the Spanish and Catalan Governments and EPSRC (UK) with a total funding over 700.000 \euro{}. He is currently directing an EU FP7 project as a partner (ASSURE project, 355.290 \euro{} for \ac{udg}) and have also directed R\&D contracts with companies (over 50.000 \euro{}).
-Furthermore, he has been successively involved in the supervision of 8 PhD candidates in the last 5 years showing his ability for such involvement.
+Dr. R. Mart\'i obtained his PhD in 2002 in mammographic image analysis from the University of East Anglia, UK.
+He is currently an assistant professor of ViCOROB.
+His main research interests are in the field of medical image analysis, specially focusing on feature extraction, pattern-recognition and image registration and its application to mammographic and prostate image analysis and \ac{cad} system.
+He has co-authored more than 70 international peer-reviewed papers including journals, conferences and book chapters.
+From 1999, he has participated as a researcher or principal investigator in various research projects funded by the Spanish and Catalan Governments and EPSRC (UK) with a total funding over 700,000 \euro{}.
+He directed an EU FP7 project as a partner (ASSURE project, 355,290 \euro{} for \ac{udg}) and have also directed R\&D contracts with companies (over 50,000 \euro{}).
+He is currently directing the national Spanish project (SMARTER, 114,440 \euro{}) which is related to the development of smart image analysis tool for the detection of breast cancer.
+Furthermore, he has been successively involved in the supervision of 8 PhD candidates in the last 5 years showing his ability for such involvement, publishing around 30 high-impact peer-reviewed journals and 80 international recognized conferences.
 He will be involved in the project supervising the research on medical imaging aspects with special emphasis on cancer lesion detection tasks and software development.
 He will establish during the whole project a strong collaboration with A. Meyer-Baese ensuring that research synergies between the host and beneficiary are properly carried out. 
 His expertise complements A. Meyer-Baese's and the fellow can profit from this constellation.
@@ -209,22 +236,30 @@ His expertise complements A. Meyer-Baese's and the fellow can profit from this c
 
 \subsubsection*{Hosting arrangements}
 
-Prof. A. Meyer-Baese and Prof. Dr. Robert Mart\'i have demonstrated their expertise in supervising researchers. They have also the endeavor, knowledge, experience and commitment to be able to offer the candidate appropriate support to continuously progress and to review his research plans, as well as providing the necessary feedback mechanisms. They will act as excellent mentors for this project.
-Guillaume Lema\^itre will establish a structured and regular communication with both scientists and all the members of theirs research groups and collaborators, to take full advantage of the arising research opportunities between the groups. Furthermore, he will keep records of all work progress and research findings, obtaining feedback by means of reports, monthly seminars, applying such feedback and working in accordance with agreed schedules, milestones, deliverables and research outputs which are described in Sect.\,\ref{sec:implementation}.
+Prof. A. Meyer-Baese and Dr. R. Mart\'i have demonstrated their expertise in supervising researchers.
+They have also the endeavor, knowledge, experience and commitment to be able to offer the candidate appropriate support to continuously progress and to review his research plans, as well as providing the necessary feedback mechanisms.
+They will act as excellent mentors for this project.
+At the start of the project, the fellow, the scientist in charge and the host institutions --- \ac{udg} and \ac{fsu} represented by the \ac{oitt} and the \ac{opa} --- will sign an \emph{Agreement} (as annex to the employment contract), ensuring that the terms of the Grant Agreement will be complied as regards to rights and obligations of the intellectual property resulting from the project, the payments, reports, and deliverables and corresponding deadlines, publications, and communications.
+Additionally, a personal \emph{Career Development} plan will be agreed with the scientist in charge, the fellow, and the host institutions through \ac{opa} and will be revised annually.
+G. Lema\^itre will establish a structured and regular communication with both scientists and all the members of theirs research groups and collaborators, to take full advantage of the arising research opportunities between the groups.
+Furthermore, he will keep records, both institutions \ac{fsu} and \ac{udg}, of all work progress and research findings, obtaining feedback by means of reports, monthly seminars, applying such feedback and working in accordance with agreed schedules, milestones, deliverables and research outputs which are described in Sect.\,\ref{sec:implementation}.
+
 In the outgoing phase, he will also have access to datasets from his home institution and computational/institutional resources, computer clusters for intensive computation provided by the host institution, and excellent facilities and experience in scientific studies aiming at the evaluation of \ac{cad} methods for prostate cancer. 
-For the re-integration of the researcher, the host will reincorporate the researcher into ViCOROB, where he has developed his main research activity. 
+For the re-integration of the researcher, the host will reincorporate the researcher into ViCOROB, where he has developed his main research activity.
 ViCOROB is part of the \emph{Technological Innovation Network Centre} (TECNIO) recognised by the Catalan Government which allows their researchers to advance their career in an entrepreneurial environment and to be more effective with their managerial skills.
 Indeed, they will gain new skills: (i) teamwork, (ii) personal development, (iii) project management, and (iv) entrepreneurship.
-Additionally, the European R\&D Programs Unit at the Research \& Technology Transfer Office (OITT) at the host institution \ac{udg} will offer assistance and support with all the administrative, legal and financial aspects related to the management and execution of the project, including the financial reporting, according to the terms established in the Grant Agreement.
+Additionally, the European R\&D Programs Unit at the \ac{oitt} at the host institution \ac{udg} will offer assistance and support with all the administrative, legal and financial aspects related to the management and execution of the project, including the financial reporting, according to the terms established in the Grant Agreement.
+
 
 \subsection{Capacity of the researcher to reach and re-enforce a position of professional maturity in research}
 \label{sec:maturity}
 
-Guillaume Lema\^itre has demonstrated to be a young and very talented researcher of a highly promising career in biomedical research. He demonstrated a highly independent research profile at the early PhD level stage. 
+G. Lema\^itre has demonstrated to be a young and very talented researcher of a highly promising career in biomedical research.
+He demonstrated a highly independent research profile at the early PhD level stage. 
 He acquired a very in-depth knowledge in the new and challenging area of prostate cancer research and wrote the first state-of-the-art journal paper in \ac{cad} systems in multi-parametric \ac{mri}.
 He became aware of the lacking accurate diagnostic tools in the clinical practise and developed the desire to advance current \ac{cad} systems and especially develop in prostate cancer research a reliable diagnostic tool. 
-During his PhD, he has developed general pattern recognition and machine learning approaches which have been deployed to a large field of application in medical imaging: (i) detection of prostate cancer in multi-parametric \ac{mri}, (ii) detection of retinal diseases in OCT images, (iii) detection of melanoma in dermoscopic images, and (iv) breast cancer detection in \ac{mri} images and \ac{us} images. 
+During his PhD, he has developed general pattern recognition and machine learning approaches which have been deployed to a large field of application in medical imaging: (i) detection of prostate cancer in multi-parametric \ac{mri}, (ii) detection of retinal diseases in \ac{oct} images, (iii) detection of melanoma in dermoscopic images, and (iv) breast cancer detection in \ac{mri} images and \ac{us} images. 
 Furthermore, he has gained knowledge in the business-related aspects of \ac{cad} system for prostate system and technology valorization, as shown by his recently published Master thesis.
 His knowledge about the scientific- and business-related aspects of prostate \ac{cad} system, together with the career development plan as part of the fellowship, will allow him to become an attractive candidate for fund and grant rising within his working institution.
 \textbf{The current proposal could lead to the development of the first commercial \ac{cad} system in Europe.}
-This excellent and unique opportunity will allow the fellow to re-enforce his entrepreneurial skill with the help of the technology transfer office of the \ac{udg}. 
+This excellent and unique opportunity will allow the fellow to re-enforce his entrepreneurial skill with the help of \ac{oitt}. 
