@@ -18,19 +18,20 @@ Despite that mortality significantly has been decreasing, the employed screening
 \textbf{Thus, additionally to cancer detection, the screening methods need to estimate the cancer aggressiveness to allow clinicians to act accordingly.}
 
 In addition, the investigators of the \ac{erspc} have concluded that the use of \emph{``multi-parametric \ac{mri} and the development of new markers are the hope for the future''}.
-That is why, \ac{cad} systems, revolved around mono- and multi-parametric \ac{mri}, are currently developed by the medical imaging community, and have given rise to the field of \textbf{radiomics} consisting in automatically extracting large number of quantitative features~\footcite{lambin2012radiomics}.
+That is why, \ac{cad} systems, revolved around mono- and currently multi-parametric \ac{mri} are developed by the medical imaging community, and have given rise to the field of \textbf{radiomics} consisting in automatically extracting large a number of quantitative features~\footcite{lambin2012radiomics}.
 Recently, Lema\^itre~\emph{et al.} extensively reviewed the developed \ac{cad} systems for prostate cancer detection~\footcite{Lemaitre2015}.
-The developed \ac{cad} systems are designed under the same architecture as depicted in Fig.\,\ref{fig:wkfcad}. 
+The developed \ac{cad} systems are designed under the same architecture composed of: (i) pre-processing, (ii) registration-segmentation, (iii) feature detection, (iv) feature extraction/selection, and (v) feature classification.
+% as depicted in Fig.\,\ref{fig:wkfcad}. 
 The available \ac{mri} modalities during prostate exam are \ac{t2w}-\ac{mri}, \ac{dw}-\ac{mri}, \ac{dce}-\ac{mri}, and \ac{mrsi}. 
 Additionally, \ac{adc} map is based on the computation of a coefficient derived from multiple \ac{dw}-\ac{mri} acquisition.
-\textbf{Currently, no \ac{cad} system has been developed using all the available modalities and thus discarding their potential discriminating power to diagnose prostate cancer.}
+\textbf{Currently, no \ac{cad} system has been developed using all the available imaging modalities and taking into account the radiomics signature but they discarded their potential for discriminating power to diagnose prostate cancer.}
 The closest attempts have used three of these modalities (i.e., \ac{t2w}-\ac{mri}, \ac{dw}-\ac{mri}, \ac{dce}-\ac{mri}) and have discarded \ac{mrsi}~\footcite{Litjens2014}\textsuperscript{,}\footcite{Viswanath2011}.
 This latter, however, has been shown to be extremely helpful to grade cancer aggressiveness particularly in the \ac{cg}~\footcite{Vos2015}, which is the most challenging zone in terms of cancer detection.
 \textbf{Furthermore, the current research mainly focus on the delineation of prostate cancers rather than on the cancer aggressiveness assessment.}
 
-\input{./content/proposal/figures/cad}
+% \input{./content/proposal/figures/cad}
 
-Therefore, the aim of this project is to design a \ac{cad} system able to both detect and assess prostate cancers using all currently available multi-parametric \ac{mri} modalities and the radiomics paradigm, by analyzing different automated and hand-crafted imaging features.
+Therefore, the aim of this project is to design a \ac{cad} system able to both detect and assess prostate cancers using all currently available multi-parametric \ac{mri} modalities and the radiomics paradigm, by analyzing different automated and traditional imaging features.
 %To achieve this goal, we will revisit the different stages of the \ac{cad} framework.
 %First, we will insure to work with the most consistent data, enhancing them using different types of pre-processing.
 %Subsequently, we will segment the prostate zones using multi-parametric \ac{mri} images 
@@ -55,7 +56,7 @@ Therefore, the aim of this project is to design a \ac{cad} system able to both d
 
 The unavailability of a public dataset in medical imaging is a major drawback.
 Currently, no multi-parametric \ac{mri} prostate data are publicly available, implying that no fair comparisons can be drawn between the different developed \ac{cad} systems.
-Recently, Lema\^itre~\emph{et al.} launch a beta web-platform~\footnote{\texttt{http://i2cvb.github.io/}} intended for reporting the evaluation of \ac{cad} systems.
+Recently, Lema\^itre~\emph{et al.} have launch a beta web-platform~\footnote{\texttt{http://i2cvb.github.io/}} intended for reporting the evaluation of \ac{cad} systems.
 A multi-parametric \ac{mri} dataset is made available, containing 60 patients and the following modalities: \ac{t2w}-\ac{mri}, \ac{dw}-\ac{mri}, \ac{dce}-\ac{mri}, and \ac{mrsi}.
 Furthermore, the data are acquired from both 1.5 T and 3.0 T \ac{mri} scanner.
 Multiple ground-truths (i.e., prostate zones, cancer lesions) are compiled by experienced radiologists and additional biopsy tests.
@@ -116,7 +117,7 @@ This method has initially been used for registration between \ac{t2w}-\ac{mri} a
 \paragraph{Detection and assessment}
 
 Up to now, \ac{cad} developed systems have solely focused on the detection of prostate cancers, omitting a real assessment of the lesion aggressiveness.
-The detection of cancers is commonly performed using machine leaning classifiers, designing frameworks relying on two compulsory stages and an intermediate optional one: (i) features detection, (ii) features selection/extraction and (iii) features classification.
+The detection of cancers is commonly performed using machine learning classifiers, designing frameworks relying on two compulsory stages and an intermediate optional one: (i) features detection, (ii) features selection/extraction and (iii) features classification.
 Lema\^itre~\emph{et al.} have extensively reviewed research carried out in each of this stage for the development of \ac{cad} for prostate cancer~\footcite{Lemaitre2015}.
 %These stages are organised in a sequential manner and thus stages upstream part of the features classification have a tremendous importance on the classification performance.
 Consequently, the use of discriminative features is certainly key and most probably the bottleneck of \ac{cad} systems, justifying the attention given by researchers to evaluate a multitude of low- and high-level visual features, inspired by computer vision or human perception.
@@ -130,7 +131,7 @@ Furthermore, \ac{cnn} can be trained using the Gleason grade obtained through bi
 \paragraph{Evaluation using \acs*{pirads}}
 
 The \ac{esur} together with the \ac{acr} have recently published the \ac{pirads}, which is the standard way to assess and report prostate lesions using multi-parametric \ac{mri}.
-This standard allows to assign a score depending of multiple criteria such as signal intensity, texture, size of lesion, modality, prostate zones, etc.
+This standard allows to assign a score depending on multiple criteria such as signal intensity, texture, size of lesion, modality, prostate zones, etc.
 None of the current \ac{cad} systems offer a \ac{pirads} score when detecting potential lesions in multi-parametric \ac{mri}.
 \textbf{Thus, we will report the output of our classification framework in terms of \ac{pirads} score, applying the provided criterion.}
 
@@ -139,9 +140,9 @@ None of the current \ac{cad} systems offer a \ac{pirads} score when detecting po
 In response to the urgent needs that the medical community is facing, the principal investigators seek to address the grand challenge in the \textbf{early detection and accurate assessment} of prostate cancer by (i) developing an advanced \ac{cad} system based on novel image analysis and data mining techniques and \textbf{\ac{pirads}} scores, and (ii) evaluating and validating it in the clinical practise. 
 Mining imaging features in a non-invasive and cost-effective way is known as \textbf{radiomics}.
 The central premise this study is that these imaging features quantify phenotypic characteristics of the entire tumour and reflect the underlying gene and protein expression patterns.
-Correct decoding of the radiomics signature of prostate cancer in multi-parametric \ac{mri} may allow differentiation between lethal and non lethal prostate cancers in a non invasive manner at the time of detection. 
+\textbf{Correct decoding of the radiomics signature of prostate cancer in multi-parametric \ac{mri} may allow differentiation between lethal and non lethal prostate cancers in a non invasive manner at the time of detection.}
 This project will revolutionize prostate cancer screening by increasing its efficacy and decreasing negative side effects.
-ProDeepCAD will serve as a blueprint for screening and diagnosis of other cancers.
+PREDICATE will serve as a blueprint for screening and diagnosis of other cancers.
 
 \subsection{Quality and appropriateness of the training and of the two way transfer of knowledge between the researcher and the host}
 \label{sec:transfer}
@@ -150,27 +151,27 @@ The main objective of the present project is to establish a mutually beneficial 
 The proposed research will allow the fellow to continue gaining experience in his former research line, the design of multi-parametric \ac{cad} systems portable to many other cancers such as breast and brain.
 The fellow will gain expertise in developing intelligent \ac{cad} systems, novel pre-processing techniques to be applied to prostate images and integrated in the \ac{cad} system, and in cancer research in general.
 
-At the start of his training in \ac{fsu}, G. Lema\^itre will be required to attend an orientation session hosted by the \ac{opa}, which will provide information on postdoctoral policies, campus resources (e.g., libraries, computing facilities, grants office), and coursework, teaching, and funding opportunities.
-\ac{fsu} currently offers a postdoctoral seminar series at which postdocs can present and receive feedback on their research, as well as courses in pedagogy, grants management, organizational behavior, and the structure of colleges and universities.
+At the start of his training in \ac{fsu}, G. Lema\^itre will be required to attend an \textbf{orientation session hosted by the \ac{opa}}, which will provide information on postdoctoral policies, campus resources (e.g., libraries, computing facilities, grants office), and coursework, teaching, and funding opportunities.
+\ac{fsu} currently offers a \textbf{postdoctoral seminar series} at which postdocs can present and receive feedback on their research, as well as courses in pedagogy, grants management, organizational behavior, and the structure of colleges and universities.
 \ac{fsu} also has several certificate programs aimed at providing additional training to postdocs.
-For example, the Postdoctoral Certificate Program in Research offers coursework in research ethics, mentoring, and becoming an independent investigator, as well as traditional journal club and research training experiences.
-\ac{fsu} has biannual an Industry Day where medical companies present their research and PhD students and postdocs as well and new research lines can be exchanged and established.
-The host's department has two visiting professors in radiology specialized in prostate research who have strong connections to General Electric, Philips, and Siemens, which will help the fellow in the development of adequate \ac{cad} solution for clinicians.
-The close proximity of the Lee-Moffitt-Cancer Center, the biggest in the Southeast of US, and the strong ties to MD Anderson ensure an additional link to the cutting edge clinical research in prostate cancer.
+For example, the \textbf{Postdoctoral Certificate Program in Research} offers coursework in research ethics, mentoring, and becoming an independent investigator, as well as traditional journal club and research training experiences.
+\ac{fsu} has an \textbf{biannual Industry Day} where medical companies present their research and PhD students and postdocs as well and new research lines can be exchanged and established.
+The host's department has two visiting professors in radiology, Prof. K. Pinker-Domenig and M. Lobbes, specialized in prostate research who have strong connections to \textbf{General Electric, Philips, and Siemens}, which will help the fellow in the development of adequate \ac{cad} solution for clinicians.
+The close proximity of the \textbf{Lee-Moffitt-Cancer Center}, the biggest in the Southeast of US, and the strong ties to \textbf{MD Anderson} ensure an additional link to the cutting edge clinical research in prostate cancer.
 \ac{opa} also regularly hosts career development seminars, to which the fellow will participate, on topics such as grant writing, lab management, research ethics, networking and interviewing, and teaching, and it has staff experienced at providing career advising suited to biomedical science researchers.
 
-In both \ac{fsu} and \ac{udg}, G. Lemai\^itre will be participate actively in weekly group meetings discussing current literature, grant applications, manuscripts, and programming/algorithmic problems.
+At both \ac{fsu} and \ac{udg}, G. Lemai\^itre will participate actively in weekly group meetings discussing current literature, grant applications, manuscripts, and programming/algorithmic problems.
 Additionally, G. Lema\^itre will mentor PhD students together with Prof. A. Meyer-Baese and Dr. R. Mart\'i.
-Furthermore, they will transfer to the fellow additional skills which they gain during there research years such as: algorithm implementation; mathematical modelling; ability to attract funding; expertise as editor of books and journal special issues; and student tutoring, curriculum development, and doctoral committee chair.
+Furthermore, they will transfer to the fellow additional skills which they gain during their research years such as: algorithm implementation; mathematical modelling; ability to attract funding; expertise as editor of books and journal special issues; and student tutoring, curriculum development, and doctoral committee chair.
 Prof. A. Meyer-Baese will also share her expertise in clinical domain: patient management; understanding cutting-edge medical methods and techniques; collaborating with physicians; radiological sources and MR images management; database management, storage and processing.
 
-In the outgoing phase, it should be emphasize that the young and active research group computer vision and robotic (ViCOROB), to which the host institution in Europe belongs, will definitely benefit from this project in the incoming phase, capitalising on the works carried out for the last decade in the area of prostate cancer. The fellow will play an indispensable role in the group by: training new researchers, superivising PhD candidates and MSc students, attracting interest for funding, applying for new grants/projects,  establishing collaborations with other groups, contacting industry related agents, strengthen hospitals and health services relations, participating in seminars, publishing papers, and attending to conferences.
+In the outgoing phase, it should be emphasize that the young and active research group computer vision and robotic (ViCOROB), to which the host institution in Europe belongs, will definitely benefit from this project in the incoming phase, capitalising on the works carried out for the last decade in the area of prostate cancer. The fellow will play an indispensable role in the group by: training new researchers, superivising PhD candidates and MSc students, attracting for funding, applying for new grants/projects,  establishing collaborations with other groups, contacting industry related agents, strengthen hospitals and health services relations, participating in seminars, publishing papers, and attending to conferences.
 
-Finally, G. Lema\^itre is the perfect candidate for the propose challenge related to the transfer of knowledge between two international institutions as \ac{udg} and \ac{fsu}: although G. lema\^itre is a junior scientist, he faced up to a similar problematic during his joint PhD between the \ac{udg} and the \ac{ub}, to which he successfully met as his research records show.
+Finally, G. Lema\^itre is the perfect candidate for the propose challenge related to the transfer of knowledge between two international institutions as \ac{udg} and \ac{fsu}: although G. lema\^itre is a junior scientist, he successfully tackled the challenge of working interdisciplinary with two research groups located in two different countries during his joint PhD at \ac{udg} and \ac{ub}, to which he successfully met as his research records show.
 Furthermore, he already proved is competence to perform delocalized research has shown by his enrolment in the open-source software community, by collaborating with researchers from different institutions\footnote{\texttt{https://github.com/scikit-learn-contrib/imbalanced-learn}}.
 Additionally to the knowledge gain during his PhD, he will be able to apply his knowledge in technology transfer in medical care acquired during MSc in Business Innovation and Technology Management.
 
-Concerning the gender issues, it is worth to mention that there exists a perfect balance between the supervisor's gender of this project and him.
+Concerning the \textbf{gender issues}, it is worth to mention that there exists a perfect balance between the supervisor's gender of this project and him.
 
 
 
@@ -217,8 +218,8 @@ He has co-authored more than 70 international peer-reviewed papers including jou
 From 1999, he has participated as a researcher or principal investigator in various research projects funded by the Spanish and Catalan Governments and EPSRC (UK) with a total funding over 700,000 \euro{}.
 He directed an EU FP7 project as a partner (ASSURE project, 355,290 \euro{} for \ac{udg}) and have also directed R\&D contracts with companies (over 50,000 \euro{}).
 He is currently directing the national Spanish project (SMARTER, 114,440 \euro{}) which is related to the development of smart image analysis tool for the detection of breast cancer.
-Furthermore, he has been successively involved in the supervision of 8 PhD candidates in the last 5 years showing his ability for such involvement, publishing around 30 high-impact peer-reviewed journals and 80 international recognized conferences.
-He will be involved in the project supervising the research on medical imaging aspects with special emphasis on cancer lesion detection tasks and software development.
+Furthermore, he has been successively involved in the supervision of 8 PhD students in the last 5 years showing his outstanding ability in research mentoring, publishing around 30 high-impact peer-reviewed journals and 80 international recognized conferences.
+He will be involved in supervising the research on medical imaging aspects with special emphasis on cancer lesion detection tasks and software development.
 He will establish during the whole project a strong collaboration with A. Meyer-Baese ensuring that research synergies between the host and beneficiary are properly carried out. 
 His expertise complements A. Meyer-Baese's and the fellow can profit from this constellation.
 
@@ -242,7 +243,7 @@ They will act as excellent mentors for this project.
 At the start of the project, the fellow, the scientist in charge and the host institutions --- \ac{udg} and \ac{fsu} represented by the \ac{oitt} and the \ac{opa} --- will sign an \emph{Agreement} (as annex to the employment contract), ensuring that the terms of the Grant Agreement will be complied as regards to rights and obligations of the intellectual property resulting from the project, the payments, reports, and deliverables and corresponding deadlines, publications, and communications.
 Additionally, a personal \emph{Career Development} plan will be agreed with the scientist in charge, the fellow, and the host institutions through \ac{opa} and will be revised annually.
 G. Lema\^itre will establish a structured and regular communication with both scientists and all the members of theirs research groups and collaborators, to take full advantage of the arising research opportunities between the groups.
-Furthermore, he will keep records, both institutions \ac{fsu} and \ac{udg}, of all work progress and research findings, obtaining feedback by means of reports, monthly seminars, applying such feedback and working in accordance with agreed schedules, milestones, deliverables and research outputs which are described in Sect.\,\ref{sec:implementation}.
+Furthermore, he will keep records at both institutions \ac{fsu} and \ac{udg}, of all work progress and research findings, obtaining feedback by means of reports, monthly seminars, applying such feedback and working in accordance with agreed schedules, milestones, deliverables and research outputs which are described in Sect.\,\ref{sec:implementation}.
 
 In the outgoing phase, he will also have access to datasets from his home institution and computational/institutional resources, computer clusters for intensive computation provided by the host institution, and excellent facilities and experience in scientific studies aiming at the evaluation of \ac{cad} methods for prostate cancer. 
 For the re-integration of the researcher, the host will reincorporate the researcher into ViCOROB, where he has developed his main research activity.
